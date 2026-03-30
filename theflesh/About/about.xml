@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>The Flesh</name>
+	<author>Horologium</author>
+	<url>https://github.com/H0rologium/TheFleshWorld</url>
+	<description>Toughspikes were the warning signs. The archotech stirs once more, determined to twist all living things to the flesh.\n\nAdds a variety of content to expand anomaly and fleshbeasts.</description>
+	<packageId>Horo.BTEOTW.theflesh</packageId>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependenciesByVersion>
+        <v1.6>
+            <!--<li>
+                <packageId>brrainz.harmony</packageId>
+                <displayName>Harmony</displayName>
+                <downloadUrl>https://github.com/pardeike/HarmonyRimWorld</downloadUrl>
+                <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+            </li>-->
+            <li>
+                <packageId>Ludeon.Rimworld.Anomaly</packageId>
+                <displayName>Anomaly</displayName>
+            </li>
+        </v1.6>
+    </modDependenciesByVersion>
+	<loadAfterByVersion>
+        <v1.6>
+            <li>brrainz.harmony</li>
+            <li>Ludeon.Rimworld.Core</li>
+            <li>Ludeon.Rimworld.Ideology</li>
+            <li>Ludeon.Rimworld.Royalty</li>
+            <li>Ludeon.Rimworld.Anomaly</li>
+            <li>Ludeon.Rimworld.Biotech</li>
+            <li>Ludeon.Rimworld.Odyssey</li>
+            <li>erdelf.MinifyEverything</li>
+            <li>CETeam.CombatExtended</li>
+            <li>Horo.BTEOTW.betweenthestars</li>
+        </v1.6>
+    </loadAfterByVersion>
+    <incompatibleWithByVersion>
+        <v1.6 />
+    </incompatibleWithByVersion>
+</ModMetaData>

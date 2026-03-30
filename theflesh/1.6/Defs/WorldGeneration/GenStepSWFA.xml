@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorldGenStepDef>
+    <defName>TheFleshPostGen</defName>
+    <order>567</order>
+    <worldGenStep Class="TheFlesh.WorldGenStep_TheFleshOptionalFactionAlliances"/>
+  </WorldGenStepDef>
+
+</Defs>
