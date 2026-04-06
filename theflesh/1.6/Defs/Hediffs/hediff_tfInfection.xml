@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>tfInfection</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Twisted Mechanites</label>
+    <defaultLabelColor>(233,129,69)</defaultLabelColor>
+    <description>Activated mechanites that are twisted by a dark archotech. Their function has been repurposed to rearranging mass, eventually warping any creature with flesh into fleshbeasts.</description>
+    <makesSickThought>true</makesSickThought>
+    <lethalSeverity>1</lethalSeverity>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.53</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.55</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.75</severityPerDayImmune>
+        <immunityPerDaySick>0.5388</immunityPerDaySick>
+        <immunityPerDayNotSick>-0.5</immunityPerDayNotSick>
+      </li>
+      <li Class="HediffCompProperties"><!--Also determines stage thresholds-->
+        <compClass>TheFlesh.HediffCompTMInfection</compClass>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>infecting</label>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.55</minSeverity>
+        <label>metastasizing</label>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.75</minSeverity>
+        <label>metastasized</label>
+        <lifeThreatening>true</lifeThreatening>
+        <vomitMtbDays>1.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.83</minSeverity>
+        <label>reshaping</label>
+        <lifeThreatening>true</lifeThreatening>
+        <vomitMtbDays>0.75</vomitMtbDays>
+        <painOffset>0.05</painOffset>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <offset>-0.25</offset>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>-0.4</offset>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <offset>-0.4</offset>
+            </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

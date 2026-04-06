@@ -6,10 +6,20 @@ namespace TheFlesh
     public class TheFleshModSettings : ModSettings
     {
         public bool alwaysAllyWithStarway;
+        public bool spreadonHit;
+        public bool instantInfect;
+        public float severityPerHit;
+        public float chanceperhitToApply;
+        public readonly float DEFAULTSEVERITYSETTING = 0.04f;
+        public readonly float DEFAULTCHANCEPERHITSETTING = 0.55f;
 
         public override void ExposeData()
         {
             Scribe_Values.Look(ref alwaysAllyWithStarway, "alwaysAlly", true);
+            Scribe_Values.Look(ref spreadonHit, "alwaysHitSpread", true);
+            Scribe_Values.Look(ref instantInfect, "instantInfect", false);
+            Scribe_Values.Look(ref chanceperhitToApply, "onhitApplyChance", DEFAULTCHANCEPERHITSETTING);
+            Scribe_Values.Look(ref severityPerHit, "tmsevperhit", DEFAULTSEVERITYSETTING);
             base.ExposeData();
         }
     }
@@ -31,8 +41,34 @@ namespace TheFlesh
 
             if (ModsConfig.IsActive("Horo.BTEOTW.betweenthestars"))
             {
+                lst.Label("<color=#14a82d>Mod integrations - Between the Stars</color>");
                 lst.CheckboxLabeled("Always Ally Starway divisions", ref settings.alwaysAllyWithStarway, "Whenever you generate a new world, starway factions will never be enemies with each other. Turning this setting off allows them to possibly be enemies with each other.");
             }
+
+            lst.GapLine();
+            
+
+            lst.CheckboxLabeled("Infection spreads through contact", ref settings.spreadonHit, "When enabled, infected creatures can inflict the infection upon hitting another creature, or increase the severity of an existing infection.\n\nDisabling this only disables spread through direct combat.");
+            
+            if (settings.spreadonHit)
+            {
+                lst.Label($"Chance per hit to spread infection: {(settings.chanceperhitToApply * 100f):F0} (The default amount is {(settings.DEFAULTCHANCEPERHITSETTING * 100f):F0})");
+                settings.chanceperhitToApply = lst.Slider(settings.chanceperhitToApply, 0f, 1f);
+
+                lst.Label($"Severity per hit on infected creatures: {(settings.severityPerHit * 100f):F0} (The default amount is {(settings.DEFAULTSEVERITYSETTING * 100f):F0})");
+                settings.severityPerHit = lst.Slider(settings.severityPerHit, 0f, 1f);
+
+
+                lst.CheckboxLabeled("Near-instant infection", ref settings.instantInfect, "<color=#f57842>WARNING, THIS MAKES THE GAME VERY DIFFICULT</color>\n\nWhen enabled, creatures infected by the Twisted Mechanites will instantly be converted.");
+
+            }
+
+
+            lst.GapLine();
+
+            
+            
+
             lst.End();
             base.DoSettingsWindowContents(inRect);
         }

@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using Verse;
 
 namespace TheFlesh
 {
@@ -11,5 +12,7 @@ namespace TheFlesh
         }
 
         public static FactionDef SWBioDivision;
+        public static HediffDef tfInfection;
+        public static HediffDef tfInfection_entity;
     }
 }

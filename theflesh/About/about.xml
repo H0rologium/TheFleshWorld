@@ -10,12 +10,12 @@
 	</supportedVersions>
 	<modDependenciesByVersion>
         <v1.6>
-            <!--<li>
+            <li>
                 <packageId>brrainz.harmony</packageId>
                 <displayName>Harmony</displayName>
                 <downloadUrl>https://github.com/pardeike/HarmonyRimWorld</downloadUrl>
                 <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
-            </li>-->
+            </li>
             <li>
                 <packageId>Ludeon.Rimworld.Anomaly</packageId>
                 <displayName>Anomaly</displayName>
@@ -26,12 +26,7 @@
         <v1.6>
             <li>brrainz.harmony</li>
             <li>Ludeon.Rimworld.Core</li>
-            <li>Ludeon.Rimworld.Ideology</li>
-            <li>Ludeon.Rimworld.Royalty</li>
             <li>Ludeon.Rimworld.Anomaly</li>
-            <li>Ludeon.Rimworld.Biotech</li>
-            <li>Ludeon.Rimworld.Odyssey</li>
-            <li>erdelf.MinifyEverything</li>
             <li>CETeam.CombatExtended</li>
             <li>Horo.BTEOTW.betweenthestars</li>
         </v1.6>

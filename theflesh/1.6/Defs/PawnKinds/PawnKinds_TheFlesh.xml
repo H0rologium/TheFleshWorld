@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="BaseTheFleshKind" Abstract="True">
+    <defaultFactionDef>Entities</defaultFactionDef>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseTheFleshKind">
+    <defName>tfBloater</defName>
+    <label>flesh bloater</label>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <race>tfBloater</race>
+    <combatPower>340</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Bulbfreak/Bulbfreak</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfInfection_entity</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+  </PawnKindDef>
+
+</Defs>

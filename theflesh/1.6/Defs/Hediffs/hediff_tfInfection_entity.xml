@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>tfInfection_entity</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Twisted Mechanites</label>
+    <defaultLabelColor>(233,129,69)</defaultLabelColor>
+    <description>A dark archotech has turned the mechanites inside of this creature's body, causing whatever it originally was to mutate into a flesh beast.</description>
+    <makesSickThought>false</makesSickThought>
+    <tendable>false</tendable>
+    <comps />
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>
