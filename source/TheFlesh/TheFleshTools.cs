@@ -8,7 +8,8 @@ namespace TheFlesh
         {
             RaceProperties rProps = victim.RaceProps;
             return (victim.Spawned &&
-                rProps.IsFlesh &&                
+                rProps.IsFlesh &&
+                !victim.Dead &&
                 !rProps.IsAnomalyEntity &&
                 !rProps.Dryad &&
                 !rProps.IsDrone &&

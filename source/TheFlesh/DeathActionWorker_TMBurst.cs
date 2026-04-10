@@ -3,6 +3,7 @@ using RimWorld.Planet;
 using System;
 using System.Collections;
 using System.Linq;
+using System.Threading.Tasks;
 using Verse;
 using Verse.AI.Group;
 
@@ -22,15 +23,17 @@ namespace TheFlesh
 
         public override void PawnDied(Corpse corpse, Lord prevLord)
         {
-            Pawn innerpawn = corpse.InnerPawn;
-            if (innerpawn == null) return;
-            if (innerpawn.IsCaravanMember() || !innerpawn.Spawned) return;
-            GenExplosion.DoExplosion(corpse.Position, corpse.Map, BLAST_BASE_RAD, DamageDefOf.AcidBurn, innerpawn, ROT_DAMAGE_BASE, DamageDefOf.AcidBurn.defaultArmorPenetration,SoundDef.Named("FleshmassBirth"));
-            var nearbyes = GenRadial.RadialDistinctThingsAround(innerpawn.Position, innerpawn.Map, (BLAST_BASE_RAD * 1f),true).OfType<Pawn>().Where(p => TheFleshTools.isInfectible(p));
+            if (corpse == null) return;
+            if (corpse.InnerPawn == null) return;
+            //instigator is null here because i put 'null' in the parameter, hope that helps
+            GenExplosion.DoExplosion(corpse.Position, corpse.Map, BLAST_BASE_RAD, DamageDefOf.AcidBurn, null, ROT_DAMAGE_BASE, DamageDefOf.AcidBurn.defaultArmorPenetration,SoundDef.Named("FleshmassBirth"),doVisualEffects:false);
+            //once again a side effect of being sick... is there no nondistinct version of RadialDistinctThingsAround?
+            var nearbyes = corpse.Map.mapPawns.AllPawnsSpawned.Where(pt => 
+                (pt.Position.InHorDistOf(corpse.Position,(BLAST_BASE_RAD*1f)) &&
+                TheFleshTools.isInfectible(pt)));
             foreach (Pawn p in nearbyes)
             {
-                HediffSet hs = p.health.hediffSet;
-                if (!hs.HasHediff(InternalDefOf.tfInfection))
+                if (!p.health.hediffSet.HasHediff(InternalDefOf.tfInfection))
                 {
                     p.health.AddHediff(HediffMaker.MakeHediff(InternalDefOf.tfInfection, p));
                 }

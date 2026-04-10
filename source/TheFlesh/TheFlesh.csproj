@@ -57,6 +57,7 @@
     <Compile Include="DeathActionWorker_TMBurst.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="HediffCompTMInfection.cs" />
+    <Compile Include="HediffCompTwistedGut.cs" />
     <Compile Include="InternalDefOf.cs" />
     <Compile Include="PatchOperation_ILikeMyFingers.cs" />
     <Compile Include="TheFleshModSettings.cs" />
