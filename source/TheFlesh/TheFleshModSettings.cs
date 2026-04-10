@@ -8,16 +8,18 @@ namespace TheFlesh
         public bool alwaysAllyWithStarway;
         public bool spreadonHit;
         public bool instantInfect;
+        public bool allowInfectedFingerspikes;
         public float severityPerHit;
         public float chanceperhitToApply;
-        public readonly float DEFAULTSEVERITYSETTING = 0.04f;
-        public readonly float DEFAULTCHANCEPERHITSETTING = 0.55f;
+        public readonly float DEFAULTSEVERITYSETTING = 0.05f;
+        public readonly float DEFAULTCHANCEPERHITSETTING = 0.7f;
 
         public override void ExposeData()
         {
             Scribe_Values.Look(ref alwaysAllyWithStarway, "alwaysAlly", true);
             Scribe_Values.Look(ref spreadonHit, "alwaysHitSpread", true);
             Scribe_Values.Look(ref instantInfect, "instantInfect", false);
+            Scribe_Values.Look(ref allowInfectedFingerspikes, "allowSickFingers", true);
             Scribe_Values.Look(ref chanceperhitToApply, "onhitApplyChance", DEFAULTCHANCEPERHITSETTING);
             Scribe_Values.Look(ref severityPerHit, "tmsevperhit", DEFAULTSEVERITYSETTING);
             base.ExposeData();
@@ -39,7 +41,7 @@ namespace TheFlesh
 
             lst.Begin(inRect);
 
-            if (ModsConfig.IsActive("Horo.BTEOTW.betweenthestars"))
+            if (ModLister.GetActiveModWithIdentifier("Horo.BTEOTW.betweenthestars", true) != null)
             {
                 lst.Label("<color=#14a82d>Mod integrations - Between the Stars</color>");
                 lst.CheckboxLabeled("Always Ally Starway divisions", ref settings.alwaysAllyWithStarway, "Whenever you generate a new world, starway factions will never be enemies with each other. Turning this setting off allows them to possibly be enemies with each other.");
@@ -58,16 +60,14 @@ namespace TheFlesh
                 lst.Label($"Severity per hit on infected creatures: {(settings.severityPerHit * 100f):F0} (The default amount is {(settings.DEFAULTSEVERITYSETTING * 100f):F0})");
                 settings.severityPerHit = lst.Slider(settings.severityPerHit, 0f, 1f);
 
-
-                lst.CheckboxLabeled("Near-instant infection", ref settings.instantInfect, "<color=#f57842>WARNING, THIS MAKES THE GAME VERY DIFFICULT</color>\n\nWhen enabled, creatures infected by the Twisted Mechanites will instantly be converted.");
-
             }
-
-
+            
             lst.GapLine();
 
-            
-            
+            lst.CheckboxLabeled("Near-instant conversion", ref settings.instantInfect, "<color=#f57842>WARNING, THIS MAKES THE GAME VERY DIFFICULT</color>\n\nWhen enabled, creatures infected by the Twisted Mechanites will instantly be converted.");
+            lst.CheckboxLabeled("Fingerspikes are also infected", ref settings.allowInfectedFingerspikes, "<color=#f57842>Requires a Game Restart to Apply Changes.</color>\n\nFingerspikes will not be infected with twisted mechanites if this is disabled");
+
+
 
             lst.End();
             base.DoSettingsWindowContents(inRect);

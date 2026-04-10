@@ -1,8 +1,5 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using Verse;
+﻿using Verse;
 using HarmonyLib;
-using UnityEngine;
 
 namespace TheFlesh
 {
@@ -34,16 +31,16 @@ namespace TheFlesh
             [HarmonyPostfix]
             public static void AddMechaniteInfectionOnHit(DamageInfo dinfo, Pawn __instance)
             {
-                if (!LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().spreadonHit) return;
                 if (__instance == null || (dinfo.Instigator as Pawn) == null) return;
                 if (dinfo.Def.isRanged || dinfo.Def.isExplosive) return;
+                if (!LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().spreadonHit) return;
                 if (!Rand.Chance(LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().chanceperhitToApply)) return;
                 //Check if attacker has infection
                 bool hasBaseinf = ((Pawn)dinfo.Instigator).health.hediffSet.HasHediff(InternalDefOf.tfInfection);
                 bool hasAdvinf = ((Pawn)dinfo.Instigator).health.hediffSet.HasHediff(InternalDefOf.tfInfection_entity);
                 if (hasBaseinf || hasAdvinf)
                 {
-                    if (__instance.RaceProps.IsFlesh && !__instance.RaceProps.IsAnomalyEntity)
+                    if (TheFleshTools.isInfectible(__instance))
                     {
                         Hediff inff = __instance.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfInfection);
                         if (inff != null)
