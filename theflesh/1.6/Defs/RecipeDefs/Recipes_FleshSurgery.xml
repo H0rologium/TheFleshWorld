@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstalltfTwistGut</defName>
+        <label>install twisted stomach</label>
+        <description>Install a twisted stomach.</description>
+        <descriptionHyperlinks>
+        <ThingDef>tfTwistGut</ThingDef>
+        <HediffDef>tfTwistGutHediff</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing twisted stomach.</jobString>
+        <ingredients>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>tfTwistGut</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+        </li>
+        </ingredients>
+        <fixedIngredientFilter>
+        <thingDefs>
+            <li>tfTwistGut</li>
+        </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+        <li>Stomach</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>tfTwistGutHediff</addsHediff>
+    </RecipeDef>
+
+</Defs>

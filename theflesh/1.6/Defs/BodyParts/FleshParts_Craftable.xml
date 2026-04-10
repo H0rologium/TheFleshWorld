@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>tfTwistGut</defName>
+        <label>twisted stomach</label>
+        <description>An installed twisted stomach. It is better than a biological stomach in almost every way. The contained mechanites produce a closed loop of nutrition through fabrication of twisted flesh inside of the stomach.</description>
+        <descriptionHyperlinks><RecipeDef>InstalltfTwistGut</RecipeDef></descriptionHyperlinks>
+        <statBases>
+            <Mass>3</Mass>
+        </statBases>
+        <tradeTags>
+            <li>None</li>
+        </tradeTags>
+        <costList>
+            <BionicStomach>1</BionicStomach>
+            <Shard>1</Shard>
+            <Bioferrite>20</Bioferrite>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+    </ThingDef>
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>tfTwistGutHediff</defName>
+        <label>twisted stomach</label>
+        <labelNoun>a twisted stomach</labelNoun>
+        <description>Regulated twisted mechanites will produce twisted meat to feed their new host without breaking free.</description>
+        <descriptionHyperlinks><RecipeDef>InstalltfTwistGut</RecipeDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>tfTwistGut</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <makeImmuneTo>
+                    <li>GutWorms</li>
+                </makeImmuneTo>
+                <foodPoisoningChanceFactor>0.3</foodPoisoningChanceFactor>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.3</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties">
+                <compClass>TheFlesh.HediffCompTwistedGut</compClass>
+            </li>
+        </comps>
+    </HediffDef>
+
+    
+
+</Defs>

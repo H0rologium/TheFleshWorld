@@ -18,15 +18,9 @@
             <baseHealthScale>2.67</baseHealthScale>
             <lifeExpectancy>15</lifeExpectancy>
             <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
-            <!--<deathAction Class="DeathActionProperties_Divide">
-                <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-                <dividePawnCount>4</dividePawnCount>
-                <dividePawnKindOptions>
-                <li>Toughspike</li>
-                <li>Trispike</li>
-                </dividePawnKindOptions>
+            <deathAction Class="TheFlesh.DeathActionProperties_TMBurst">
+                <intensity>0.08</intensity>
             </deathAction>
-            <renderTree>Bulbfreak</renderTree>-->
             <lifeStageAges>
                 <li>
                 <def>EntityFullyFormed</def>

@@ -6,7 +6,7 @@
     <hediffClass>HediffWithComps</hediffClass>
     <label>Twisted Mechanites</label>
     <defaultLabelColor>(233,129,69)</defaultLabelColor>
-    <description>Activated mechanites that are twisted by a dark archotech. Their function has been repurposed to rearranging mass, eventually warping any creature with flesh into fleshbeasts.</description>
+    <description>Activated mechanites that are twisted by a dark archotech. Their function has been repurposed to rearranging mass, eventually warping any creature with flesh into abominations.</description>
     <makesSickThought>true</makesSickThought>
     <lethalSeverity>1</lethalSeverity>
     <tendable>true</tendable>

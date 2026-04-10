@@ -4,6 +4,9 @@
   <PawnKindDef Name="BaseTheFleshKind" Abstract="True">
     <defaultFactionDef>Entities</defaultFactionDef>
     <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    <meleeAttackInfectionPathways>
+      <li>EntityAttacked</li>
+    </meleeAttackInfectionPathways>
   </PawnKindDef>
 
   <PawnKindDef ParentName="BaseTheFleshKind">
@@ -24,7 +27,6 @@
     <startingHediffs>
       <li>
         <def>tfInfection_entity</def>
-        <severity>1</severity>
       </li>
     </startingHediffs>
   </PawnKindDef>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef>
+        <defName>Make_tfFleshGut</defName>
+        <label>make twisted stomach</label>
+        <description>Make a twisted stomach</description>
+        <jobString>Making twisted stomach.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+        <workAmount>3000</workAmount>
+        <unfinishedThingDef>UnfinishedHealthItemGhoul</unfinishedThingDef>
+        <ingredients>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+        </li>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>Bioferrite</li>
+            </thingDefs>
+            </filter>
+            <count>20</count>
+        </li>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>Shard</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+        </li>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>BionicStomach</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+        </li>
+        </ingredients>
+        <fixedIngredientFilter>
+        <thingDefs>
+            <li>ComponentIndustrial</li>
+            <li>Bioferrite</li>
+            <li>Shard</li>
+            <li>BionicStomach</li>
+        </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <tfTwistGut>1</tfTwistGut>
+        </products>
+        <researchPrerequisite>tfFleshGut</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>167</displayPriority>
+        <recipeUsers>
+            <li>BioferriteShaper</li>
+        </recipeUsers>
+    </RecipeDef>
+
+</Defs>

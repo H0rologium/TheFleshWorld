@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <EntityCodexEntryDef>
+        <defName>tfCodexBloater</defName>
+        <label>bloaters</label>
+        <description>A further mutation of fleshbeasts, bloaters release stored mechanites in an acidic explosion on death. Stay well away from them if possible.</description>
+        <uiIconPath>UI/CodexIcons/bloaterCodexIcon</uiIconPath>
+        <category>Basic</category>
+        <linkedThings>
+            <li>tfBloater</li>
+        </linkedThings>
+        <discoveredResearchProjects>
+            <li>tfFleshGut</li>
+        </discoveredResearchProjects>
+        <!--<provocationIncidents>
+            <li>FleshbeastAttack</li>
+        </provocationIncidents>-->
+        <orderInCategory>222</orderInCategory>
+    </EntityCodexEntryDef>
+
+</Defs>
