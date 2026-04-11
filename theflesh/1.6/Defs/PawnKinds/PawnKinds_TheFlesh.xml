@@ -14,7 +14,7 @@
     <label>flesh bloater</label>
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <race>tfBloater</race>
-    <combatPower>340</combatPower>
+    <combatPower>260</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -29,6 +29,49 @@
         <def>tfInfection_entity</def>
       </li>
     </startingHediffs>
+  </PawnKindDef>
+
+ <PawnKindDef ParentName="BaseTheFleshKind">
+    <defName>tfNewborn</defName>
+    <label>newborn</label>
+    <race>tfNewborn</race>
+    <combatPower>80</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Toughspike/Dessicated_Toughspike</texPath>
+          <drawSize>2</drawSize>
+          <attachPoints>
+            <li>
+              <offset>(-.3, 0, .45)</offset>
+              <type>PlatformRestraint0</type>
+            </li>
+            <li>
+              <offset>(.3, 0, .45)</offset>
+              <type>PlatformRestraint1</type>
+            </li>
+            <li>
+              <offset>(.17, 0, -.43)</offset>
+              <type>PlatformRestraint2</type>
+            </li>
+            <li>
+              <offset>(-.2, 0, -.45)</offset>
+              <type>PlatformRestraint3</type>
+            </li>
+          </attachPoints>
+        </dessicatedBodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
   </PawnKindDef>
 
 </Defs>

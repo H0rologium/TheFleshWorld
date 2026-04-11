@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <!--<Operation Class="PatchOperationSequence"> Entities can only be linked to ONE codex entry at a time
+    <Operation Class="PatchOperationSequence">
         <operations>
             <li Class="PatchOperationAdd">
-                <xpath>Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath>
+                <xpath>Defs/EntityCodexEntryDef[defName="Gorehulk"]/linkedThings</xpath>
                 <value>
-                    <li>tfBloater</li>
+                    <li>tfNewborn</li>
                 </value>
             </li>
         </operations>
-    </Operation>-->
+    </Operation>
 </Patch>

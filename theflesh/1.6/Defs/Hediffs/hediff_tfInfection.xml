@@ -74,7 +74,7 @@
         </capMods>
       </li>
       <li>
-        <minSeverity>0.83</minSeverity>
+        <minSeverity>0.79</minSeverity>
         <label>reshaping</label>
         <lifeThreatening>true</lifeThreatening>
         <vomitMtbDays>0.75</vomitMtbDays>

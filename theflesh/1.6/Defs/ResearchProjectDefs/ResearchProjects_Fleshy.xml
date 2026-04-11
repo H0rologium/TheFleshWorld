@@ -4,7 +4,7 @@
         <defName>tfFleshGut</defName>
         <label>twisted stomach</label>
         <description>Craft an artificial stomach that uses twisted mechanites to maintain nutrition for its host.</description>
-        <tab>tfTab</tab>
+        <tab>Anomaly</tab>
         <prerequisites>
             <li>BioferriteShaping</li>
         </prerequisites>
