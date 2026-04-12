@@ -18,7 +18,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Fleshbeast/Bulbfreak/Bulbfreak</texPath>
+          <texPath>Things/Pawn/Fleshybeast/bloater</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
         </bodyGraphicData>
@@ -39,12 +39,12 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike</texPath>
+          <texPath>Things/Pawn/Fleshybeast/newborn</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2.2</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Fleshbeast/Toughspike/Dessicated_Toughspike</texPath>
+          <texPath>Things/Pawn/Fleshybeast/dessicated_newborn</texPath>
           <drawSize>2</drawSize>
           <attachPoints>
             <li>
@@ -66,12 +66,17 @@
           </attachPoints>
         </dessicatedBodyGraphicData>
         <silhouetteGraphicData>
-          <texPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</texPath>
+          <texPath>Things/Pawn/Fleshybeast/newborn_menuicon</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <drawSize>2</drawSize>
         </silhouetteGraphicData>
       </li>
     </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfInfection_entity</def>
+      </li>
+    </startingHediffs>
   </PawnKindDef>
 
 </Defs>

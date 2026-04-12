@@ -33,11 +33,8 @@ namespace TheFlesh
                 TheFleshTools.isInfectible(pt)));
             foreach (Pawn p in nearbyes)
             {
-                if (!p.health.hediffSet.HasHediff(InternalDefOf.tfInfection))
-                {
-                    p.health.AddHediff(HediffMaker.MakeHediff(InternalDefOf.tfInfection, p));
-                }
-                p.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfInfection).Severity += Props.intensity;
+                TheFleshTools.TryInfectPawn(p);
+                TheFleshTools.TryAddSeverity(p, Props.intensity);
             }
         }
     }

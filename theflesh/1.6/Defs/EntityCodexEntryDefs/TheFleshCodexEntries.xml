@@ -18,5 +18,22 @@
         </provocationIncidents>-->
         <orderInCategory>222</orderInCategory>
     </EntityCodexEntryDef>
+    <EntityCodexEntryDef>
+        <defName>FleshDayBreak</defName>
+        <label>red sun</label>
+        <description>A phenomena where twisted mechanites fill the sky, using light as a vector for transmission. Indirect roofing and remaining inside can protect creatures from the deadly effects.</description>
+        <category>Advanced</category>
+        <uiIconPath>UI/CodexIcons/FleshDayBreak</uiIconPath>
+        <linkedIncidents>
+            <li>FleshSun</li>
+        </linkedIncidents>
+        <discoveredResearchProjects>
+            <li>tfFleshGut</li>
+        </discoveredResearchProjects>
+        <provocationIncidents>
+            <li>FleshSun</li>
+        </provocationIncidents>
+        <orderInCategory>1150</orderInCategory>
+    </EntityCodexEntryDef>
 
 </Defs>

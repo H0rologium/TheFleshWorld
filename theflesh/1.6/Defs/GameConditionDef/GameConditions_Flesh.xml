@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GameConditionDef>
+        <defName>GCFleshDayBreak</defName>
+        <conditionClass>TheFlesh.GameCondition_FleshDayBreakBase</conditionClass>
+        <label>twisted sun</label>
+        <description>A dark archotech has taken to filling the very skies with its twisted mechanites. All sunlight on the visual spectrum between 390nm-700nm should be avoided at all costs.</description>
+        <weatherDef>FleshDayBreak</weatherDef>
+        <preventNeutralVisitors>true</preventNeutralVisitors>
+        <canBePermanent>false</canBePermanent>
+        <displayOnUI>true</displayOnUI>
+        <natural>false</natural>
+        <allowUnderground>false</allowUnderground>
+        <letterText>It is here.</letterText>
+        <endMessage>The red sun is ending.</endMessage>
+        <pennedAnimalsSeekShelter>true</pennedAnimalsSeekShelter>
+    </GameConditionDef>
+
+    <GameConditionDef>
+        <defName>FleshDayBreak_Onset</defName>
+        <conditionClass>TheFlesh.GameCondition_FleshOnsetBase</conditionClass>
+        <label>twisted sun approaching</label>
+        <description>A dark archotech has begun filling the skies with its twisted mechanites. In a matter of time, the very sun will become lethal.</description>
+        <weatherDef>Clear</weatherDef>
+        <preventNeutralVisitors>false</preventNeutralVisitors>
+        <canBePermanent>false</canBePermanent>
+        <displayOnUI>true</displayOnUI>
+        <natural>false</natural>
+        <allowUnderground>false</allowUnderground>
+        <letterText>A whining drone fills the air. Somewhere out there, a dark archotech plans to enact a horrid deed by gathering a large amount of twisted mechanites.\n\nNot long from now, twisted mechanites will fill the sky, and will be able to spread using ultraviolet light. Find roofed shelter as soon as possible.</letterText>
+        <endMessage>The sun is here.</endMessage>
+        <pennedAnimalsSeekShelter>true</pennedAnimalsSeekShelter>
+    </GameConditionDef>
+
+</Defs>

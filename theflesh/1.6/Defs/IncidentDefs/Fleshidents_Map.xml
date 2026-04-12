@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <IncidentDef ParentName="AnomalyIncidentBase">
+        <defName>FleshSun</defName>
+        <label>twisted sun</label>
+        <category>ThreatBig</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+        <gameCondition>FleshDayBreak_Onset</gameCondition>
+        <letterLabel>Twisted Sun</letterLabel>
+        <letterDef>ThreatBig</letterDef>
+        <baseChance>0.16</baseChance>
+        <earliestDay>60</earliestDay>
+        <minAnomalyThreatLevel>2</minAnomalyThreatLevel>
+        <minRefireDays>40</minRefireDays>
+        <disabledWhen>
+            <extremeWeatherIncidentsDisabled>true</extremeWeatherIncidentsDisabled>
+        </disabledWhen>
+        <durationDays>2.1~2.9</durationDays>
+    </IncidentDef>
+
+</Defs>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <WeatherDef Name="FleshDayBreakBase" Abstract="True">
+        <label>red sun</label>
+        <isBad>true</isBad>
+        <canOccurAsRandomForcedEvent>false</canOccurAsRandomForcedEvent>
+        <favorability>VeryBad</favorability>
+        <perceivePriority>4</perceivePriority>
+        <moveSpeedMultiplier>0.4</moveSpeedMultiplier>
+        <!--<overlayClasses>
+          <li>TheFlesh.WeatherOverlay_TwistedSun</li>
+        </overlayClasses>
+        Honestly looks better when we do flat color changes??-->
+        <skyColorsDay>
+            <sky>(0.72, 0.28, 0.28)</sky>
+            <shadow>(0.75, 0.55, 0.55)</shadow>
+            <overlay>(0.6, 0.2, 0.1)</overlay>
+            <saturation>1.52</saturation>
+        </skyColorsDay>
+        <skyColorsDusk>
+            <sky>(0.65, 0.18, 0.18)</sky>
+            <shadow>(0.7, 0.45, 0.45)</shadow>
+            <overlay>(0.6, 0.2, 0.1)</overlay>
+            <saturation>1.44</saturation>
+        </skyColorsDusk>
+        <skyColorsNightEdge>
+          <sky>(0.482, 0.603, 0.682)</sky>
+          <shadow>(0.85, 0.85, 0.85)</shadow>
+          <overlay>(0.6, 0.6, 0.6)</overlay>
+          <saturation>1.25</saturation>
+        </skyColorsNightEdge>
+        <skyColorsNightMid>
+          <sky>(0.482, 0.603, 0.682)</sky>
+          <shadow>(0.85, 0.85, 0.85)</shadow>
+          <overlay>(0.6, 0.6, 0.6)</overlay>
+          <saturation>1.25</saturation>
+        </skyColorsNightMid>
+    </WeatherDef>
+
+  <WeatherDef ParentName="FleshDayBreakBase">
+    <defName>FleshDayBreak</defName>
+    <description>the burning radiance that fills the sky.</description>
+    <ambientSounds>
+      <li>Ambient_UnnaturalDarkness_Phase1</li>
+    </ambientSounds>
+  </WeatherDef>
+
+</Defs>

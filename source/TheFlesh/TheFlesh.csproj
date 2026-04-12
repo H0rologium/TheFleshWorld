@@ -55,6 +55,9 @@
   <ItemGroup>
     <Compile Include="DeathActionProperties_TMBurst.cs" />
     <Compile Include="DeathActionWorker_TMBurst.cs" />
+    <Compile Include="GameCondition_AlwaysBright.cs" />
+    <Compile Include="GameCondition_FleshDayBreakBase.cs" />
+    <Compile Include="GameCondition_FleshOnsetBase.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="HediffCompTMInfection.cs" />
     <Compile Include="HediffCompTwistedGut.cs" />
@@ -63,6 +66,7 @@
     <Compile Include="TheFleshModSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheFleshTools.cs" />
+    <Compile Include="WeatherOverlay_TwistedSun.cs" />
     <Compile Include="WorldGenStep_TheFleshOptionalFactionAlliances.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

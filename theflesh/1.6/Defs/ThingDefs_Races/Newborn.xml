@@ -7,25 +7,25 @@
         <statBases>
         <MoveSpeed>6</MoveSpeed>
         <MinimumContainmentStrength>70</MinimumContainmentStrength>
-        <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+        <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
         <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
         </statBases>
-        <uiIconPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</uiIconPath>
+        <uiIconPath>Things/Pawn/Fleshybeast/newborn_menuicon</uiIconPath>
         <race>
-        <body>tfNewbornBody</body>
-        <baseBodySize>2</baseBodySize>
-        <baseHealthScale>4</baseHealthScale>
-        <lifeExpectancy>15</lifeExpectancy>
-        <renderTree>Toughspike</renderTree>
-        <canBecomeShambler>true</canBecomeShambler>
-        <lifeStageAges>
-        <li>
-        <def>FullyFormed_Toughspike</def>
-        <soundWounded>Pawn_Fleshbeast_Toughspike_Wounded</soundWounded>
-        <soundDeath>Pawn_Fleshbeast_Toughspike_Death</soundDeath>
-        <soundCall>Pawn_Fleshbeast_Toughspike_Call</soundCall>
-        </li>
-        </lifeStageAges>
+            <body>tfNewbornBody</body>
+            <baseBodySize>2</baseBodySize>
+            <baseHealthScale>2.5</baseHealthScale>
+            <lifeExpectancy>15</lifeExpectancy>
+            <renderTree>Toughspike</renderTree>
+            <canBecomeShambler>true</canBecomeShambler>
+            <lifeStageAges>
+            <li>
+                <def>FullyFormed_Toughspike</def>
+                <soundWounded>Pawn_Fleshbeast_Toughspike_Wounded</soundWounded>
+                <soundDeath>Pawn_Fleshbeast_Toughspike_Death</soundDeath>
+                <soundCall>Pawn_Fleshbeast_Toughspike_Call</soundCall>
+            </li>
+            </lifeStageAges>
         </race>
         <comps>
             <li Class="CompProperties_AttachPoints">
@@ -61,16 +61,34 @@
         </comps>
         <tools>
             <li>
-            <label>head</label>
-            <capacities>
-            <li>Blunt</li>
-            </capacities>
-            <power>3</power>
-            <cooldownTime>2</cooldownTime>
-            <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-            <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-            <chanceFactor>0.2</chanceFactor>
-            <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+                <label>left flesh club</label>
+                <labelNoLocation>flesh club</labelNoLocation>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>1.8</cooldownTime>
+                <linkedBodyPartsGroup>LeftFleshClub</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>right flesh club</label>
+                <labelNoLocation>flesh club</labelNoLocation>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>1.8</cooldownTime>
+                <linkedBodyPartsGroup>RightFleshClub</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>bone spike</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>23</power>
+                <cooldownTime>2</cooldownTime>
             </li>
         </tools>
     </ThingDef>

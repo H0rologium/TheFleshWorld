@@ -11,7 +11,7 @@
         <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
         <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
         </statBases>
-        <uiIconPath>Things/Pawn/Fleshbeast/Bulbfreak/Bulbfreak_MenuIcon</uiIconPath>
+        <uiIconPath>Things/Pawn/Fleshybeast/bloater_menuicon</uiIconPath>
         <race>
             <body>tfBloaterBody</body>
             <baseBodySize>4</baseBodySize>
