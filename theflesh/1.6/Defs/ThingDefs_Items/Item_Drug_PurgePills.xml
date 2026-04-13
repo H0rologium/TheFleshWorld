@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="DrugBase">
+        <defName>mechPurgerPills</defName>
+        <label>Mechanite Neutralization Pills</label>
+        <description>A drug synthesized to force the body to reject as many internal mechanites as possible.\n\nThe biological strain from this causes users to become ill in a similar nature to food poisoning.</description>
+        <graphicData>
+        <texPath>Things/Item/purgerpill</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>0.6</drawSize>
+        </graphicData>
+        <tradeability>Sellable</tradeability>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <tickerType>Rare</tickerType>
+        <statBases>
+        <MarketValue>1500</MarketValue>
+        <Mass>0.1</Mass>
+        <DeteriorationRate>8</DeteriorationRate>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <recipeUsers>
+                <li>SerumCentrifuge</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+            <displayPriority>1670</displayPriority>
+            <researchPrerequisites>
+                <li>tfPurgePills</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>20</Neutroamine>
+            <Shard>1</Shard>
+            <Bioferrite>20</Bioferrite>
+        </costList>
+        <ingestible>
+            <baseIngestTicks>80</baseIngestTicks>
+            <chairSearchRadius>4</chairSearchRadius>
+            <foodType>Processed</foodType>
+            <drugCategory>Medical</drugCategory>
+            <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+            <outcomeDoers>
+                <li Class="TheFlesh.IngestionOutcomeDoer_CleanOutMechanites" />
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>10</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>mechPurgerPillsChem</chemical>
+                <addictiveness>0.0</addictiveness>
+                <minToleranceToAddict>1.0</minToleranceToAddict>
+                <existingAddictionSeverityOffset>0.0</existingAddictionSeverityOffset>
+                <listOrder>36</listOrder>
+            </li>
+        </comps>
+        <allowedArchonexusCount>2</allowedArchonexusCount>
+    </ThingDef>
+
+    <ChemicalDef>
+        <defName>mechPurgerPillsChem</defName>
+        <label>Mechanite Neutralization Pills</label>
+        <addictionHediff>AmbrosiaAddiction</addictionHediff>
+        <toleranceHediff>AmbrosiaTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.0</onGeneratedAddictedToleranceChance>
+        <generateAddictionGenes>false</generateAddictionGenes>
+    </ChemicalDef>
+</Defs>

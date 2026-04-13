@@ -28,11 +28,14 @@
             <li>FleshSun</li>
         </linkedIncidents>
         <discoveredResearchProjects>
-            <li>tfFleshGut</li>
+            <li>tfPurgePills</li>
         </discoveredResearchProjects>
         <provocationIncidents>
             <li>FleshSun</li>
         </provocationIncidents>
+        <hideInPlaystyles>
+            <li>AmbientHorror</li>
+        </hideInPlaystyles>
         <orderInCategory>1150</orderInCategory>
     </EntityCodexEntryDef>
 

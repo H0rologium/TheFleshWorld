@@ -7,8 +7,8 @@ namespace TheFlesh
 {
     public class GameCondition_FleshDayBreakBase : GameCondition_ForceWeather
     {
-        private const float SEVERITY_PER_BLAST = 0.15f;
-
+        private const float SEVERITY_PER_BLAST = 0.2f;
+        private readonly HediffDef[] buffDefs = { HediffDefOf.FrenzyField, HediffDefOf.BloodRage };
         public override void Init()
         {
             foreach (Map map in base.AffectedMaps)
@@ -20,7 +20,11 @@ namespace TheFlesh
 
         public override void GameConditionTick()
         {
-            if (!(Find.TickManager.TicksGame % 200 == 0)) return;
+            if (GenLocalDate.HourFloat(this.gameConditionManager.ownerMap) == 18.0f) Messages.Message("TwistedSunNightfall".Translate(), MessageTypeDefOf.NeutralEvent, false);
+            if (GenLocalDate.HourFloat(this.gameConditionManager.ownerMap) == 3.0f) Messages.Message("TwistedSunMorning".Translate(), MessageTypeDefOf.ThreatBig, false);
+
+
+            if (!(Find.TickManager.TicksGame % 167 == 0) || !TheFleshTools.isDaytime(GenLocalDate.HourFloat(this.gameConditionManager.ownerMap))) return;
             foreach (Map map in base.AffectedMaps)
             {
                 List<Pawn> victims = map.mapPawns.AllPawnsSpawned.ToList<Pawn>();
@@ -38,10 +42,18 @@ namespace TheFlesh
             }
         }
 
+
         private void buffEntity(Pawn entity)
-        { 
-            
+        {
+            if (!TheFleshTools.isDaytime(GenLocalDate.HourFloat(this.gameConditionManager.ownerMap))) return;
+            Hediff hasFrenzy = entity.health.hediffSet.GetFirstHediffOfDef(buffDefs[0]);
+            Hediff hasRage = entity.health.hediffSet.GetFirstHediffOfDef(buffDefs[1]);
+            if (hasFrenzy == null) { addBuffToEntity(entity, buffDefs[0]); hasFrenzy = entity.health.hediffSet.GetFirstHediffOfDef(buffDefs[0]); }
+            if (hasRage == null) { addBuffToEntity(entity, buffDefs[1]); hasRage = entity.health.hediffSet.GetFirstHediffOfDef(buffDefs[1]); }
+            hasFrenzy.Severity += 0.1f;
+            hasRage.Severity += 0.1f;
         }
+        private void addBuffToEntity(Pawn entity, HediffDef bta) => entity.health.AddHediff(bta);
 
         public override float TemperatureOffset()
         {

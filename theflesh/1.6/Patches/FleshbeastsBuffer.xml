@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <!--Toughspike-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Toughspike"]/statBases/ArmorRating_Sharp</xpath>
+                <value>
+                    <ArmorRating_Sharp>0.33</ArmorRating_Sharp>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Toughspike"]/statBases/ArmorRating_Blunt</xpath>
+                <value>
+                    <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Toughspike"]/statBases/ToxicResistance</xpath>
+                <value>
+                    <ToxicResistance>0.8</ToxicResistance>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Toughspike"]/statBases</xpath>
+                <value>
+                    <ToxicEnvironmentResistance>0.4</ToxicEnvironmentResistance>
+                </value>
+            </li>
+
+            <!--Trispike-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Trispike"]/statBases</xpath>
+                <value>
+                    <ArmorRating_Sharp>0.29</ArmorRating_Sharp>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Trispike"]/statBases</xpath>
+                <value>
+                    <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Trispike"]/statBases/ToxicResistance</xpath>
+                <value>
+                    <ToxicResistance>0.8</ToxicResistance>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Trispike"]/statBases</xpath>
+                <value>
+                    <ToxicEnvironmentResistance>0.4</ToxicEnvironmentResistance>
+                </value>
+            </li>
+
+            <!--Fingerspike-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Fingerspike"]/statBases</xpath>
+                <value>
+                    <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Fingerspike"]/statBases</xpath>
+                <value>
+                    <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Fingerspike"]/statBases/ToxicResistance</xpath>
+                <value>
+                    <ToxicResistance>0.6</ToxicResistance>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Fingerspike"]/statBases</xpath>
+                <value>
+                    <ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

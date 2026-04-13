@@ -55,14 +55,19 @@
   <ItemGroup>
     <Compile Include="DeathActionProperties_TMBurst.cs" />
     <Compile Include="DeathActionWorker_TMBurst.cs" />
-    <Compile Include="GameCondition_AlwaysBright.cs" />
     <Compile Include="GameCondition_FleshDayBreakBase.cs" />
     <Compile Include="GameCondition_FleshOnsetBase.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="HediffCompTMInfection.cs" />
     <Compile Include="HediffCompTwistedGut.cs" />
+    <Compile Include="IncidentWorker_AnimalInfectionSingle.cs" />
+    <Compile Include="IncidentWorker_MakeFleshyGameCondition.cs" />
+    <Compile Include="IncidentWorker_tfFakeVisitorGroup.cs" />
+    <Compile Include="IngestionOutcomeDoer_CleanOutMechanites.cs" />
     <Compile Include="InternalDefOf.cs" />
     <Compile Include="PatchOperation_ILikeMyFingers.cs" />
+    <Compile Include="PsychicRitualToil_PurgeMechanitesPlayer.cs" />
+    <Compile Include="PsychicRitual_PurgeMechanitesPlayer.cs" />
     <Compile Include="TheFleshModSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheFleshTools.cs" />

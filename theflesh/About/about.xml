@@ -22,6 +22,11 @@
             </li>
         </v1.6>
     </modDependenciesByVersion>
+    <loadBeforeByVersion>
+        <v1.6>
+            <li>Zorin.CeAnomalyRebalance</li>
+        </v1.6>
+    </loadBeforeByVersion>
 	<loadAfterByVersion>
         <v1.6>
             <li>brrainz.harmony</li>
@@ -32,6 +37,8 @@
         </v1.6>
     </loadAfterByVersion>
     <incompatibleWithByVersion>
-        <v1.6 />
+        <v1.6>
+            <li>KunogiD.RetouchableVoid</li>
+        </v1.6>
     </incompatibleWithByVersion>
 </ModMetaData>

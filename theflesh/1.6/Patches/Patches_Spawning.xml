@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Anomaly</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!--Normal Spawning-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/FactionDef[defName="Entities"]/pawnGroupMakers/li[kindDef="Fleshbeasts"]/options</xpath>
+                    <value>
+                        <tfBloater>3</tfBloater>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/FactionDef[defName="Entities"]/pawnGroupMakers/li[kindDef="Fleshbeasts"]/options/Bulbfreak</xpath>
+                    <value>
+                        <Bulbfreak>2</Bulbfreak>
+                    </value>
+                </li>
+                <!--Spawning with dreadmeld (i.e. underground)-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/FactionDef[defName="Entities"]/pawnGroupMakers/li[kindDef="FleshbeastsWithDreadmeld"]/options</xpath>
+                    <value>
+                        <tfBloater>4</tfBloater>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/FactionDef[defName="Entities"]/pawnGroupMakers/li[kindDef="FleshbeastsWithDreadmeld"]/options/Fingerspike</xpath>
+                    <value>
+                        <Fingerspike>6</Fingerspike>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

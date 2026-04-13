@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <TheFlesh.PsychicRitual_PurgeMechanitesPlayer>
+        <defName>PurgeMechanitesPlayer</defName>
+        <label>purge mechanites</label>
+        <description>Make an appeal to a dark archotech to deactive all twisted mechanites nearby. As the twisted mechanites are by archotech design, a great offering is needed for appeasement.</description>
+        <researchPrerequisite>SummonFleshbeastsPlayer</researchPrerequisite>
+        <outcomeDescription>A successful ritual will remove any carrier of Twisted Mechanites from the area.</outcomeDescription>
+        <hoursUntilOutcome>1</hoursUntilOutcome>
+        <castableOnPocketMaps>false</castableOnPocketMaps>
+        <layerWhitelist>
+            <li>Surface</li>
+        </layerWhitelist>
+        <requiredOffering>
+        <filter>
+            <thingDefs>
+                <li>Gold</li>
+            </thingDefs>
+        </filter>
+        <count>100</count>
+        </requiredOffering>
+        <cooldownHours>789</cooldownHours>
+        <chanterRole>ChanterAdvanced</chanterRole>
+        <iconPath>UI/PsychicRituals/PsychicRitual_PurgeMechanitesPlayer</iconPath>
+    </TheFlesh.PsychicRitual_PurgeMechanitesPlayer>
+
+</Defs>

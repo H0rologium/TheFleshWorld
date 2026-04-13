@@ -24,7 +24,7 @@ namespace TheFlesh
         public override void PawnDied(Corpse corpse, Lord prevLord)
         {
             if (corpse == null) return;
-            if (corpse.InnerPawn == null) return;
+            if (corpse.InnerPawn == null || TheFleshTools.anomalyShutOff()) return;
             //instigator is null here because i put 'null' in the parameter, hope that helps
             GenExplosion.DoExplosion(corpse.Position, corpse.Map, BLAST_BASE_RAD, DamageDefOf.AcidBurn, null, ROT_DAMAGE_BASE, DamageDefOf.AcidBurn.defaultArmorPenetration,SoundDef.Named("FleshmassBirth"),doVisualEffects:false);
             //once again a side effect of being sick... is there no nondistinct version of RadialDistinctThingsAround?

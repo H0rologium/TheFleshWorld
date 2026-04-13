@@ -2,7 +2,7 @@
 <Defs>
 
     <WeatherDef Name="FleshDayBreakBase" Abstract="True">
-        <label>red sun</label>
+        <label>Red Sun</label>
         <isBad>true</isBad>
         <canOccurAsRandomForcedEvent>false</canOccurAsRandomForcedEvent>
         <favorability>VeryBad</favorability>
@@ -42,7 +42,7 @@
     <defName>FleshDayBreak</defName>
     <description>the burning radiance that fills the sky.</description>
     <ambientSounds>
-      <li>Ambient_UnnaturalDarkness_Phase1</li>
+      <li>Ambient_UnnaturalDarkness_Phase2</li>
     </ambientSounds>
   </WeatherDef>
 

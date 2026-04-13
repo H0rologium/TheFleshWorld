@@ -33,6 +33,7 @@ namespace TheFlesh
             {
                 if (__instance == null || (dinfo.Instigator as Pawn) == null) return;
                 if (dinfo.Def.isRanged || dinfo.Def.isExplosive) return;
+                if (TheFleshTools.anomalyShutOff(true)) return;
                 if (!LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().spreadonHit) return;
                 if (!Rand.Chance(LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().chanceperhitToApply)) return;
                 //Check if attacker has infection

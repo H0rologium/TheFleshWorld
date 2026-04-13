@@ -6,7 +6,11 @@ namespace TheFlesh
 {
     public class HediffCompTMInfection : HediffComp
     {
-        //public override void CompPostTickInterval(ref float severityAdjustment, int delta)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
+        {
+            if (!parent.pawn.IsHashIntervalTick(2500, delta)) return;
+            if (TheFleshTools.anomalyShutOff(true)) removeHediff();
+        }
 
         public override void Notify_PawnKilled()
         {
@@ -22,12 +26,16 @@ namespace TheFlesh
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
         {
-            parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfInfection));
+
+            if (parent.Severity < 0.9999f) return;
             if (!parent.pawn.IsAnimal)
             {
                 if (!TheFleshTools.isReadytoDie(parent.pawn)) return;
             }
+            removeHediff();
             parent.pawn.Corpse.Destroy(DestroyMode.Vanish);
         }
+
+        private void removeHediff() => parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfInfection));
     }
 }

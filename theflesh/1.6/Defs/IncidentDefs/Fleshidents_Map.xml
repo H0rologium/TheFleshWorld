@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <IncidentDef>
+        <defName>AnimalIfectionSingle</defName>
+        <label>single animal infection</label>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>TheFlesh.IncidentWorker_AnimalInfectionSingle</workerClass>
+        <baseChance>5</baseChance>
+        <minRefireDays>10</minRefireDays>
+        <category>ThreatSmall</category>
+    </IncidentDef>
+
     <IncidentDef ParentName="AnomalyIncidentBase">
         <defName>FleshSun</defName>
         <label>twisted sun</label>
@@ -8,7 +20,7 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
-        <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+        <workerClass>TheFlesh.IncidentWorker_MakeFleshyGameCondition</workerClass>
         <gameCondition>FleshDayBreak_Onset</gameCondition>
         <letterLabel>Twisted Sun</letterLabel>
         <letterDef>ThreatBig</letterDef>

@@ -13,7 +13,7 @@ namespace TheFlesh
             if (this.TicksPassed >= EVENT_DELAY_TIME_TICKS && TheFleshTools.isDaytime(GenLocalDate.HourFloat(base.SingleMap)))
             {
                 GameCondition ngc = GameConditionMaker.MakeCondition(InternalDefOf.GCFleshDayBreak, (this.TicksLeft));
-                Find.World.GameConditionManager.RegisterCondition(ngc);
+                base.gameConditionManager.RegisterCondition(ngc);
                 this.End();
             }
         }
@@ -40,6 +40,8 @@ namespace TheFlesh
             {
                 map.weatherDecider.StartNextWeather();
             }
+            Find.LetterStack.ReceiveLetter("TwistedSunArrivedLabel".Translate(), "TwistedSunArrivedText".Translate(), LetterDefOf.ThreatBig);
+
         }
     }
 }

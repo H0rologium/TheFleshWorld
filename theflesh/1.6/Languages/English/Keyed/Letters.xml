@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-
+    <TwistedSunArrivedLabel>Twisted Sun Rises</TwistedSunArrivedLabel>
+    <TwistedSunArrivedText>The atmosphere begins to be cut with a sudden red brilliance. The twisted sun has risen.\n\nRemain indoors at all times. During night, ventures may be made outside at the risk of the individual.</TwistedSunArrivedText>
+    <TwistedSunNightfall>The sun has set for now. It is relatively safe to go outside until the next morning</TwistedSunNightfall>
+    <TwistedSunMorning>The sun will rise within an hour or two! Get back inside!</TwistedSunMorning>
+    <CleanRitualCompleteLabel>{0} complete</CleanRitualCompleteLabel>
+    <CleanRitualCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. The archotech will cleanse the area of twisted mechanites.</CleanRitualCompleteText>
+    <AnimalInfectMessage>Something is out there...</AnimalInfectMessage>
+    <SingleVisitorArrivesFleshprise>{PAWN_titleIndef} from {1} is visiting the colony.\n\n{PAWN_pronoun} is named {PAWN_nameFull}.</SingleVisitorArrivesFleshprise>
+    <GroupVisitorsArriveFleshprise>A group from {0} are visiting the colony.</GroupVisitorsArriveFleshprise>
   
 </LanguageData>
