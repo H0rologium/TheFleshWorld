@@ -34,4 +34,21 @@
         <durationDays>2.1~2.9</durationDays>
     </IncidentDef>
 
+    <IncidentDef ParentName="AnomalyIncidentBase">
+        <defName>TheFleshDeepenedPitGate</defName>
+        <label>pit lair</label>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>TheFlesh.IncidentWorker_TheFleshPitGate</workerClass>
+        <letterLabel>Pit Lair Opening</letterLabel>
+        <letterText>A wide piece of terrain has begun sinking into the depths, forming a deepening hole. At this rate, it will deepen out of sight within a day. You can hear inhuman shrieks rising from the depths. Something seems off about this occurrence.\n\nMove buildings and items away from the emergence point.</letterText>
+        <letterDef>ThreatBig</letterDef>
+        <baseChance>0.35</baseChance>
+        <minThreatPoints>1067</minThreatPoints>
+        <minAnomalyThreatLevel>2</minAnomalyThreatLevel>
+        <category>ThreatBig</category>
+        <minRefireDays>50</minRefireDays>
+    </IncidentDef>
+
 </Defs>

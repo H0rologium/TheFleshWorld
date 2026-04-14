@@ -26,9 +26,9 @@ namespace TheFlesh
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = (Map)parms.target;
-            if (!base.TryResolveParms(parms) || TheFleshTools.anomalyShutOff(true))
+            if (!base.TryResolveParms(parms) || TheFleshTools.anomalyShutOff(true) || !LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().enableSurpriseVisits)
             {
-                return LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().enableSurpriseVisits;
+                return false;
             }
             List<Pawn> list = base.SpawnPawns(parms);
             if (list.Count == 0)

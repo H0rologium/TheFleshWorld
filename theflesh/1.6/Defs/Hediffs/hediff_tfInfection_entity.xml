@@ -9,7 +9,9 @@
     <description>A dark archotech has turned the mechanites inside of this creature's body, causing whatever it originally was to mutate into a flesh beast.</description>
     <makesSickThought>false</makesSickThought>
     <tendable>false</tendable>
-    <comps />
+    <comps>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
     <stages>
       <li>
         <capMods>

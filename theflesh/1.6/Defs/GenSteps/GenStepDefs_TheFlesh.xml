@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <GenStepDef>
+        <defName>FleshMind</defName>
+        <order>589</order>
+        <genStep Class="GenStep_Dreadmeld" />
+    </GenStepDef>
+
+  <GenStepDef>
+    <defName>ExtremeFleshmass</defName>
+    <order>256</order>
+    <genStep Class="TheFlesh.Generators.GenStep_FleshLairFlesh" />
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>LairPOIs</defName>
+    <order>588</order>
+    <genStep Class="TheFlesh.Generators.GenStep_FleshLairPOI" />
+  </GenStepDef>
+
+</Defs>

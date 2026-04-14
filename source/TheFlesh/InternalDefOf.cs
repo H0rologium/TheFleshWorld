@@ -10,6 +10,8 @@ namespace TheFlesh
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(InternalDefOf));
         }
+        public static ThingDef FleshLairSpawner;
+        public static ThingDef tfMindPitGate;
 
         public static FactionDef SWBioDivision;
 

@@ -10,7 +10,7 @@ namespace TheFlesh
     {
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            if (!base.CanFireNowSub(parms) || TheFleshTools.anomalyShutOff(true))
+            if (!base.CanFireNowSub(parms) || TheFleshTools.anomalyShutOff(true) || !LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().enableSurpriseVisits)
             {
                 return false;
             }

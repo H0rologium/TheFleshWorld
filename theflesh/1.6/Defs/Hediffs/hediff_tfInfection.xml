@@ -24,10 +24,12 @@
       <li Class="HediffCompProperties"><!--Also determines stage thresholds-->
         <compClass>TheFlesh.HediffCompTMInfection</compClass>
       </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>
     <stages>
       <li>
         <label>infecting</label>
+        <painOffset>-0.15</painOffset>
         <capMods>
           <li>
             <capacity>Manipulation</capacity>
@@ -42,6 +44,7 @@
       <li>
         <minSeverity>0.55</minSeverity>
         <label>metastasizing</label>
+        <painOffset>0.05</painOffset>
         <capMods>
           <li>
             <capacity>Manipulation</capacity>
@@ -58,6 +61,7 @@
         <label>metastasized</label>
         <lifeThreatening>true</lifeThreatening>
         <vomitMtbDays>1.5</vomitMtbDays>
+        <painOffset>0.2</painOffset>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>

@@ -38,5 +38,33 @@
         </hideInPlaystyles>
         <orderInCategory>1150</orderInCategory>
     </EntityCodexEntryDef>
+    <EntityCodexEntryDef>
+        <defName>FleshSpiker</defName>
+        <label>spikers</label>
+        <description>A further mutation of fleshbeasts. Spikers are smaller mounds of fless that can split into smaller forms upon death. Unlike trispikes, however, these creatures are designed to be vectors of spreading twisted mechanites, delivering weak but rapid attacks.</description>
+        <category>Basic</category>
+        <uiIconPath>UI/CodexIcons/spikerCodexIcon</uiIconPath>
+        <linkedThings>
+            <li>tfSpiker</li>
+        </linkedThings>
+        <discoveredResearchProjects>
+            <li>tfDieVest</li>
+        </discoveredResearchProjects>
+        <orderInCategory>223</orderInCategory>
+    </EntityCodexEntryDef>
+    <EntityCodexEntryDef>
+        <defName>FleshMind</defName>
+        <label>Flesh Mind</label>
+        <description>In culminations of archotech influence, massive amounts of twisted mechanites can shape mass into Flesh Minds. These horrid entities are a semi-direct extension of Horaxian influence.</description>
+        <category>Ultimate</category>
+        <uiIconPath>UI/CodexIcons/fleshmindCodexIcon</uiIconPath>
+        <!--<linkedThings>
+            <li></li>
+        </linkedThings>-->
+        <discoveredResearchProjects>
+            <li>tfBossDrops</li>
+        </discoveredResearchProjects>
+        <orderInCategory>167</orderInCategory>
+    </EntityCodexEntryDef>
 
 </Defs>

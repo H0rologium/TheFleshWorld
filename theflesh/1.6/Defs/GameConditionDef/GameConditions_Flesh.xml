@@ -4,7 +4,7 @@
     <GameConditionDef>
         <defName>GCFleshDayBreak</defName>
         <conditionClass>TheFlesh.GameCondition_FleshDayBreakBase</conditionClass>
-        <label>twisted sun</label>
+        <label>twisted Sun</label>
         <description>A dark archotech has taken to filling the very skies with its twisted mechanites. All sunlight on the visual spectrum between 390nm-700nm should be avoided at all costs.</description>
         <weatherDef>FleshDayBreak</weatherDef>
         <preventNeutralVisitors>true</preventNeutralVisitors>
@@ -20,7 +20,7 @@
     <GameConditionDef>
         <defName>FleshDayBreak_Onset</defName>
         <conditionClass>TheFlesh.GameCondition_FleshOnsetBase</conditionClass>
-        <label>twisted sun approaching</label>
+        <label>twisted Sun Approaching</label>
         <description>A dark archotech has begun filling the skies with its twisted mechanites. In a matter of time, the very sun will become lethal.</description>
         <weatherDef>Clear</weatherDef>
         <preventNeutralVisitors>false</preventNeutralVisitors>

@@ -32,7 +32,7 @@ namespace TheFlesh
             {
                 if (!TheFleshTools.isReadytoDie(parent.pawn)) return;
             }
-            removeHediff();
+            //removeHediff(); updated to do this in the def.
             parent.pawn.Corpse.Destroy(DestroyMode.Vanish);
         }
 

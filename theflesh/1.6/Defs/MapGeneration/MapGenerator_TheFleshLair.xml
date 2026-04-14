@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MapGeneratorDef Name="tfLairUndercave">
+    <defName>tfLairUndercave</defName>
+    <label>undercave</label>
+    <isUnderground>true</isUnderground>
+    <forceCaves>true</forceCaves>
+    <ignoreAreaRevealedLetter>true</ignoreAreaRevealedLetter>
+    <disableCallAid>true</disableCallAid>
+    <customMapComponents>
+      <li>UndercaveMapComponent</li>
+    </customMapComponents>
+    <pocketMapProperties>
+      <biome>Undercave</biome>
+      <temperature>15</temperature>
+      <tileMutators>
+        <li>UndergroundCave</li>
+      </tileMutators>
+    </pocketMapProperties>
+    <genSteps>
+      <li>ElevationFertility</li>
+      <li>MutatorPostElevationFertility</li>
+      <li>Terrain</li>
+      <li>MutatorPostTerrain</li>
+      <li>PlaceCaveExit</li>
+
+      <li>Fleshbulbs</li>
+      <li>FleshMind</li>
+
+      <li>LairPOIs</li>
+      <li>ExtremeFleshmass</li>
+      <li>MutatorFinal</li>
+      <li>Fog</li>
+    </genSteps>
+  </MapGeneratorDef>
+
+ 
+
+</Defs>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+    <defName>tfMindPitGate</defName>
+    <label>Deepened Pit Gate</label>
+    <description>A massive, foreboding hole that connects the surface with a dark network of underground caves. It is possible to climb down into the caverns below.\n\nThis pit in particular travels much farther down, to a larger underground cave.</description>
+    <size>(8,8)</size>
+    <useHitPoints>false</useHitPoints>
+    <thingClass>PitGate</thingClass>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/PitGate/PitGate</texPath>
+      <drawSize>(8,8)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Impassable</passability>
+    <holdsRoof>true</holdsRoof>
+    <destroyable>false</destroyable>
+    <building>
+      <isEdifice>true</isEdifice>
+      <deconstructible>false</deconstructible>
+      <isTargetable>false</isTargetable>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <expandHomeArea>false</expandHomeArea>
+    </building>
+    <portal>
+      <pocketMapGenerator>tfLairUndercave</pocketMapGenerator>
+      <exitDef>CaveExit</exitDef><!--ThingDef/Building-->
+      <enteredLetterLabel>Fleshbeast Lair</enteredLetterLabel>
+      <enteredLetterText>In the depths of the pit gate, you have discovered a massive cavern system infested with fleshbeasts.\n\nThe entire cavern system seems unstable. If you find what lies behind the fleshmass, you may be able to collapse the tunnels and close the pit gate.\n\nBe prepared, however. The creatures lurking in a lair are a significantly larger threat if you are not prepared.</enteredLetterText>
+      <enteredLetterDef>ThreatBig</enteredLetterDef>
+      <traverseSound>TraversePitGate</traverseSound>
+    </portal>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_ContentsMapPortal</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_LeaveFilthOnDestroyed">
+        <filthDef>Filth_LooseGround</filthDef>
+        <thickness>10</thickness>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>FleshLairSpawner</defName>
+    <label>underground emergence</label>
+    <description>Something is emerging from the ground here.</description>
+    <thingClass>BuildingGroundSpawner</thingClass>
+    <destroyable>false</destroyable>
+    <holdsRoof>true</holdsRoof>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(8, 8)</size>
+    <uiIconPath>UI/Icons/UndergroundEmergence</uiIconPath>
+    <building>
+      <groundSpawnerSustainedEffecter>EmergencePointSustained8X8</groundSpawnerSustainedEffecter>
+      <groundSpawnerCompleteEffecter>EmergencePointComplete8X8</groundSpawnerCompleteEffecter>
+      <groundSpawnerThingToSpawn>tfMindPitGate</groundSpawnerThingToSpawn>
+      <groundSpawnerSpawnDelay>5000~20000</groundSpawnerSpawnDelay>
+      <groundSpawnerDestroyAdjacent>true</groundSpawnerDestroyAdjacent>
+      <groundSpawnerSustainerSound>PitGateOpening</groundSpawnerSustainerSound>
+      <groundSpawnerLetterLabel>Pit gate opened</groundSpawnerLetterLabel>
+      <groundSpawnerLetterText>The shifting terrain has fallen into the depths below, forming a massive hole.\n\nThis pit gate will remain open until you collapse its entrance. Explore the pit gate to find a way to collapse it from underneath and to find useful items in the undercaves.</groundSpawnerLetterText>
+    </building>
+  </ThingDef>
+</Defs>

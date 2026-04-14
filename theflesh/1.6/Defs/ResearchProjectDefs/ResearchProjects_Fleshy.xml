@@ -15,6 +15,36 @@
     </ResearchProjectDef>
 
     <ResearchProjectDef>
+        <defName>tfDieVest</defName>
+        <label>Combat Mechanites</label>
+        <description>Craft a serum that can forceably afflict the victim with various mechanites.</description>
+        <tab>Anomaly</tab>
+        <prerequisites>
+            <li>SerumSynthesis</li>
+        </prerequisites>
+        <knowledgeCost>30</knowledgeCost>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <researchViewX>3.0</researchViewX>
+        <researchViewY>3.4</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>tfBossDrops</defName>
+        <label>Mechanite Manipulation</label>
+        <description>Utilize the study of how fleshminds are formed to put twisted mechanites to work... on your behalf.\n\nThere's a lot of advancements that can be made once we understand how mass is twisted by these mechanites.</description>
+        <tab>Anomaly</tab>
+        <prerequisites>
+            <li>SerumSynthesis</li>
+            <li>AdvancedPsychicRituals</li>
+            <li>BioferriteShaping</li>
+        </prerequisites>
+        <knowledgeCost>60</knowledgeCost>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <researchViewX>6.50</researchViewX>
+        <researchViewY>5.10</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
         <defName>tfPurgePills</defName>
         <label>Mechanite Pills</label>
         <description>Craft a drug that causes immediate relief from some forms of mechanites, purging them from a user's system.</description>

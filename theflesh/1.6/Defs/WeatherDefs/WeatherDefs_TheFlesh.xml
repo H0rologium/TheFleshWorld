@@ -40,7 +40,7 @@
 
   <WeatherDef ParentName="FleshDayBreakBase">
     <defName>FleshDayBreak</defName>
-    <description>the burning radiance that fills the sky.</description>
+    <description>All creatures exposed to the sun will deteriorate extremely rapidly, leading to transformation into hideous things.\n\nThe deadly effects take hold around 05:00 and persist up through 20:00.</description>
     <ambientSounds>
       <li>Ambient_UnnaturalDarkness_Phase2</li>
     </ambientSounds>

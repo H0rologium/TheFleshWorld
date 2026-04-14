@@ -79,4 +79,34 @@
     </startingHediffs>
   </PawnKindDef>
 
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>tfSpiker</defName>
+    <label>spikemound</label>
+    <race>tfSpiker</race>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <abilities>
+      <li>SpikeLaunch_Spikerspike</li>
+    </abilities>
+    <combatPower>67</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/spiker</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>0.6</drawSize>
+          <drawOffset>(0, 0, 0.1)</drawOffset>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/spiker_menuicon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>0.6</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfInfection_entity</def>
+      </li>
+    </startingHediffs>
+  </PawnKindDef>
 </Defs>

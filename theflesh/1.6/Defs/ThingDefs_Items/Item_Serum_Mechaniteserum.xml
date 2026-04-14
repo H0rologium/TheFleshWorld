@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="SerumBase">
+    <defName>tfMechaniteSerum</defName>
+    <label>mechanite serum</label>
+    <description>A syringe of flesh-colored liquid that injects a cocktail of mechanites into the user. While some of these effects can be beneficial, it can take a while to recover from using this serum.\n\nDue to the nature of this serum, it is either considered a last resort or cruel and unusual punishment. Caution should be advised using this serum.</description>
+    <graphicData>
+      <texPath>Things/Item/mechserum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>FibrousMechanites</hediffDef>
+        <allowRepeatedUse>false</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>tfInfection</hediffDef>
+        <allowRepeatedUse>false</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>SensoryMechanites</hediffDef>
+        <allowRepeatedUse>false</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+    </comps>
+    <costList>
+      <Neutroamine>5</Neutroamine>
+      <Meat_Twisted>20</Meat_Twisted>
+      <Bioferrite>20</Bioferrite>
+    </costList>
+    <recipeMaker>
+      <workAmount>1080</workAmount>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>tfDieVest</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

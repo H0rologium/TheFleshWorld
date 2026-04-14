@@ -3,12 +3,12 @@
     <ThingDef ParentName="BaseFleshbeast">
         <defName>tfNewborn</defName>
         <label>newborn</label>
-        <description>A monstrous creature that resembles a massive, painfully swollen mound of mass with randomly reconfigured body parts. Near its top is a stretched face that watches its victim with dead eyes. While resembling a gorehulk, newborns have no developed organ to launch spikes, instead their newly twisted bodies excel at finding and lashing out at the nearest target. Letting the void turn you into a newborn is considered a horaxian honor.</description>
+        <description>A monstrous creature that resembles a massive, painfully swollen mound of mass with randomly reconfigured body parts. Near its top is a stretched face that watches its victim with dead eyes. While resembling a gorehulk, newborns have no developed organ to launch spikes, instead their newly twisted bodies excel at finding and lashing out at the nearest target. These creatures are directly aligned with the will of Horax, and are regarded as some sort of natural enemy to other flesh beasts.</description>
         <statBases>
-        <MoveSpeed>6</MoveSpeed>
-        <MinimumContainmentStrength>70</MinimumContainmentStrength>
-        <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-        <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+            <MoveSpeed>6</MoveSpeed>
+            <MinimumContainmentStrength>70</MinimumContainmentStrength>
+            <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
         </statBases>
         <uiIconPath>Things/Pawn/Fleshybeast/newborn_menuicon</uiIconPath>
         <race>
