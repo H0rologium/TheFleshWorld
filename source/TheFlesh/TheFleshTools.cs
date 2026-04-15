@@ -34,9 +34,11 @@ namespace TheFlesh
         #region Checks
         public static bool isInfectible(Pawn victim)
         {
+            Hediff hasHediff = victim.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfMechanitePurgerAdv);
             RaceProperties rProps = victim.RaceProps;
             return (victim.Spawned &&
                 rProps.IsFlesh &&
+                hasHediff == null &&
                 !victim.Dead &&
                 !rProps.IsAnomalyEntity &&
                 !rProps.Dryad &&

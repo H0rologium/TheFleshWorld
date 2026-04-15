@@ -12,6 +12,7 @@ namespace TheFlesh
         public bool instantInfect;
         public bool allowInfectedFingerspikes;
         public bool enableSurpriseVisits;
+        public bool lesserMindDrop;
         public float severityPerHit;
         public float chanceperhitToApply;
         public readonly float DEFAULTSEVERITYSETTING = 0.05f;
@@ -26,6 +27,7 @@ namespace TheFlesh
             Scribe_Values.Look(ref allowInfectedFingerspikes, "allowSickFingers", true);
             Scribe_Values.Look(ref chanceperhitToApply, "onhitApplyChance", DEFAULTCHANCEPERHITSETTING);
             Scribe_Values.Look(ref severityPerHit, "tmsevperhit", DEFAULTSEVERITYSETTING);
+            Scribe_Values.Look(ref lesserMindDrop, "tfbossdropmid", false);
             base.ExposeData();
         }
     }
@@ -70,7 +72,8 @@ namespace TheFlesh
 
             lst.CheckboxLabeled("Fingerspikes are also infected", ref settings.allowInfectedFingerspikes, "<color=#f57842>Requires a Game Restart to Apply Changes.</color>\n\nFingerspikes will not be infected with twisted mechanites if this is disabled");
             lst.CheckboxLabeled("Enable Surprises", ref settings.enableSurpriseVisits, "Sometimes someone can show up and be hiding a dangerous secret. Does not occur with wanderer / refugee join events.");
-
+            lst.CheckboxLabeled("Nerf Elite Drops", ref settings.lesserMindDrop, "If enabled, nerfs miniboss drops from Persona Core to 5 Shards instead. This is in addition to its normal drops.");
+           
             if (false) //Experimental mod options.
             {
                 lst.CheckboxLabeled("Near-instant conversion", ref settings.instantInfect, "<color=#f57842>WARNING, THIS MAKES THE GAME VERY DIFFICULT</color>\n\nWhen enabled, creatures infected by the Twisted Mechanites will instantly be converted.");

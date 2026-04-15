@@ -9,7 +9,7 @@ namespace TheFlesh
         public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
             if (!parent.pawn.IsHashIntervalTick(2500, delta)) return;
-            if (TheFleshTools.anomalyShutOff(true)) removeHediff();
+            if (TheFleshTools.anomalyShutOff(true) || parent.pawn.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfMechanitePurgerAdv) != null) removeHediff();
         }
 
         public override void Notify_PawnKilled()

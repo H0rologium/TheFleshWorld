@@ -53,20 +53,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alert_DeepenedFleshPitUnstable.cs" />
+    <Compile Include="Alert_EmergingFleshDeepenedPitGate.cs" />
+    <Compile Include="Alert_TwistedSunHasRisen.cs" />
+    <Compile Include="CompFleshMind.cs" />
     <Compile Include="DeathActionProperties_TMBurst.cs" />
     <Compile Include="DeathActionWorker_TMBurst.cs" />
+    <Compile Include="DyingFleshMind.cs" />
     <Compile Include="GameCondition_FleshDayBreakBase.cs" />
     <Compile Include="GameCondition_FleshOnsetBase.cs" />
+    <Compile Include="Generators\GenStep_Boss.cs" />
     <Compile Include="Generators\GenStep_FleshLairFlesh.cs" />
     <Compile Include="Generators\GenStep_FleshLairPOI.cs" />
+    <Compile Include="Generators\TheFlesh_UndercaveMapComponent.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="HediffCompTMInfection.cs" />
     <Compile Include="HediffCompTwistedGut.cs" />
+    <Compile Include="HoraxBlessing.cs" />
     <Compile Include="IncidentWorker_AnimalInfectionSingle.cs" />
     <Compile Include="IncidentWorker_MakeFleshyGameCondition.cs" />
     <Compile Include="IncidentWorker_tfFakeVisitorGroup.cs" />
     <Compile Include="IncidentWorker_TheFleshPitGate.cs" />
     <Compile Include="IngestionOutcomeDoer_CleanOutMechanites.cs" />
+    <Compile Include="IngestionOutcomeDoer_FontOfLife.cs" />
     <Compile Include="InternalDefOf.cs" />
     <Compile Include="PatchOperation_ILikeMyFingers.cs" />
     <Compile Include="PsychicRitualToil_PurgeMechanitesPlayer.cs" />

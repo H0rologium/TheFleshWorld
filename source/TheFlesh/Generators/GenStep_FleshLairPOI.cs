@@ -82,14 +82,11 @@ namespace TheFlesh.Generators
                     case GenStep_FleshLairPOI.UnderCaveInterestKind.MushroomPatch:
                         this.GenerateMushroomPatch(map, intVec2);
                         break;
-                    case GenStep_FleshLairPOI.UnderCaveInterestKind.ChemfuelGenerator:
-                        this.GenerateChemfuel(map, intVec2);
-                        break;
                     case GenStep_FleshLairPOI.UnderCaveInterestKind.CorpseGear:
                         this.GenerateCorpseGear(map, intVec2);
                         break;
-                    case GenStep_FleshLairPOI.UnderCaveInterestKind.CorpsePile:
-                        GenStep_UndercaveInterest.GenerateCorpsePile(map, intVec2);
+                    case GenStep_FleshLairPOI.UnderCaveInterestKind.LootPile:
+                        GenStep_FleshLairPOI.GenerateLootPile(map, intVec2);
                         break;
                     case GenStep_FleshLairPOI.UnderCaveInterestKind.SleepingFleshbeasts:
                         this.GenerateSleepingFleshbeasts(map, intVec2);
@@ -125,32 +122,12 @@ namespace TheFlesh.Generators
                 }
             }
         }
-        private void GenerateChemfuel(Map map, IntVec3 cell)
-        {
-            if (!GenPlace.TryPlaceThing(ThingMaker.MakeThing(ThingDefOf.AncientGenerator ?? ThingDefOf.ChemfuelPoweredGenerator, null), cell, map, ThingPlaceMode.Direct, null, null, null, 1))
-            {
-                return;
-            }
-            int randomInRange = GenStep_FleshLairPOI.ChemfuelCountRange.RandomInRange;
-            for (int i = 0; i < randomInRange; i++)
-            {
-                Thing thing = ThingMaker.MakeThing(ThingDefOf.Chemfuel, null);
-                thing.stackCount = GenStep_FleshLairPOI.ChemfuelStackCountRange.RandomInRange;
-                GenPlace.TryPlaceThing(thing, cell, map, ThingPlaceMode.Radius, null, null, null, 2);
-            }
-            foreach (IntVec3 intVec in GridShapeMaker.IrregularLump(cell, map, 20, null))
-            {
-                if (intVec.GetEdifice(map) == null)
-                {
-                    FilthMaker.TryMakeFilth(intVec, map, ThingDefOf.Filth_Fuel, 1, FilthSourceFlags.None, true);
-                }
-            }
-        }
         private void GenerateCorpseGear(Map map, IntVec3 cell)
         {
             List<ThingDef> list = new List<ThingDef>();
             list.Add(ThingDefOf.MedicineIndustrial);
             list.Add(ThingDefOf.MealSurvivalPack);
+            list.Add(InternalDefOf.tfMechaniteSerum);
             Faction faction;
             Find.FactionManager.TryGetRandomNonColonyHumanlikeFaction(out faction, true, false, TechLevel.Undefined, TechLevel.Undefined, false, false);
             Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Drifter, faction, PawnGenerationContext.NonPlayer, null, false, false, false, true, false, 1f, false, true, false, true, true, false, false, false, false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, false, false, false, false, null, null, null, null, null, 0f, DevelopmentalStage.Adult, null, null, null, false, false, false, -1, 0, false));
@@ -165,20 +142,18 @@ namespace TheFlesh.Generators
             GenPlace.TryPlaceThing(thing, cell, map, ThingPlaceMode.Radius, null, null, null, 1);
         }
 
-        public static void GenerateCorpsePile(Map map, IntVec3 cell)
+        public static void GenerateLootPile(Map map, IntVec3 cell)
         {
-            int randomInRange = GenStep_FleshLairPOI.CorpseCountRange.RandomInRange;
+            int randomInRange = GenStep_FleshLairPOI.LootCountRange.RandomInRange;
+            List<ThingDef> lootDrops = (new ThingDef[]{ InternalDefOf.tfMechaniteSerum, ThingDefOf.MedicineUltratech, ThingDefOf.Luciferium, ThingDefOf.Meat_Twisted, ThingDefOf.Gold, ThingDefOf.Silver, ThingDefOf.Bioferrite, ThingDefOf.Bioferrite, ThingDefOf.Bioferrite, ThingDefOf.Bioferrite, ThingDefOf.Bioferrite }).ToList<ThingDef>();
             Faction faction;
             Find.FactionManager.TryGetRandomNonColonyHumanlikeFaction(out faction, true, false, TechLevel.Undefined, TechLevel.Undefined, false, false);
-            int num = Mathf.RoundToInt((float)(GenStep_FleshLairPOI.CorpseAgeRangeDays.RandomInRange * 60000));
             for (int i = 0; i < randomInRange; i++)
             {
-                Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Drifter, faction, PawnGenerationContext.NonPlayer, null, false, false, false, true, false, 1f, false, true, false, true, true, false, false, false, false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, false, false, false, false, null, null, null, null, null, 0f, DevelopmentalStage.Adult, null, null, null, false, false, false, -1, 0, false));
-                pawn.Kill(null, null);
-                pawn.Corpse.Age = num;
-                pawn.Corpse.GetComp<CompRottable>().RotProgress += (float)pawn.Corpse.Age;
-                GenPlace.TryPlaceThing(pawn.Corpse, cell, map, ThingPlaceMode.Radius, null, null, null, 4);
-                pawn.Corpse.SetForbidden(true, true);
+                Thing thingToSpawn = ThingMaker.MakeThing(lootDrops[i],null);
+                thingToSpawn.stackCount = GenStep_FleshLairPOI.GearStackCountRange.RandomInRange;
+                GenPlace.TryPlaceThing(thingToSpawn, cell, map, ThingPlaceMode.Radius, null, null, null, 4);
+                thingToSpawn.SetForbidden(true, true);
             }
         }
 
@@ -187,7 +162,7 @@ namespace TheFlesh.Generators
             int randomInRange = GenStep_FleshLairPOI.NumFleshbeastsRange.RandomInRange;
             for (int i = 0; i < randomInRange; i++)
             {
-                Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Fingerspike, Faction.OfEntities, null);
+                Pawn pawn = PawnGenerator.GeneratePawn(InternalDefOf.tfBloater, Faction.OfEntities, null);
                 GenPlace.TryPlaceThing(pawn, cell, map, ThingPlaceMode.Radius, null, null, null, 4);
                 CompCanBeDormant compCanBeDormant;
                 if (pawn.TryGetComp(out compCanBeDormant))
@@ -197,32 +172,19 @@ namespace TheFlesh.Generators
             }
         }
 
-        private static readonly IntRange InterestPointCountRange = new IntRange(3, 5);
-        private const int InterestPointSize = 20;
-        private const float MinDistApart = 10f;
-        private const float PatchDensity = 0.7f;
+        private static readonly IntRange InterestPointCountRange = new IntRange(6, 10);
         private static readonly IntRange PatchSizeRange = new IntRange(50, 70);
-        private static readonly IntRange ChemfuelCountRange = new IntRange(3, 5);
-        private static readonly IntRange ChemfuelStackCountRange = new IntRange(10, 20);
-        private const int ChemfuelSpawnRadius = 2;
-        private const int ChemfuelPuddleSize = 20;
-        private static readonly IntRange JellyCountRange = new IntRange(2, 3);
-        private static readonly IntRange JellyStackCountRange = new IntRange(15, 40);
-        private const int JellySpawnRadius = 3;
         private static readonly IntRange CorpseAgeRangeDays = new IntRange(15, 120);
-        private const int GearSpawnRadius = 1;
         private static readonly IntRange GearStackCountRange = new IntRange(2, 5);
-        private static readonly IntRange CorpseCountRange = new IntRange(3, 6);
-        private const int CorpseSpawnRadius = 4;
+        private static readonly IntRange LootCountRange = new IntRange(6, 10);
         private static readonly IntRange NumFleshbeastsRange = new IntRange(2, 4);
-        private const int SleepingFleshbeastSpawnRadius = 4;
         private enum UnderCaveInterestKind
         {
             MushroomPatch,
             ChemfuelGenerator,
             InsectHive,
             CorpseGear,
-            CorpsePile,
+            LootPile,
             SleepingFleshbeasts
         }
     }
