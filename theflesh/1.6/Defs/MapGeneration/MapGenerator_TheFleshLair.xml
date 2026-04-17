@@ -9,7 +9,7 @@
     <ignoreAreaRevealedLetter>true</ignoreAreaRevealedLetter>
     <disableCallAid>true</disableCallAid>
     <customMapComponents>
-      <li>UndercaveMapComponent</li>
+      <li>TheFlesh.Generators.TheFlesh_UndercaveMapComponent</li>
     </customMapComponents>
     <pocketMapProperties>
       <biome>Undercave</biome>
@@ -21,6 +21,7 @@
     <genSteps>
       <li>ElevationFertility</li>
       <li>MutatorPostElevationFertility</li>
+      <li>Underground_RocksFromGrid</li>
       <li>Terrain</li>
       <li>MutatorPostTerrain</li>
       <li>PlaceCaveExit</li>
@@ -30,6 +31,7 @@
 
       <li>LairPOIs</li>
       <li>ExtremeFleshmass</li>
+      <li>FleshSacks</li>
       <li>MutatorFinal</li>
       <li>Fog</li>
     </genSteps>

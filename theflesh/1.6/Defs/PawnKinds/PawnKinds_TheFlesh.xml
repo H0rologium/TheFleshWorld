@@ -43,28 +43,6 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2.2</drawSize>
         </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Fleshybeast/dessicated_newborn</texPath>
-          <drawSize>2</drawSize>
-          <attachPoints>
-            <li>
-              <offset>(-.3, 0, .45)</offset>
-              <type>PlatformRestraint0</type>
-            </li>
-            <li>
-              <offset>(.3, 0, .45)</offset>
-              <type>PlatformRestraint1</type>
-            </li>
-            <li>
-              <offset>(.17, 0, -.43)</offset>
-              <type>PlatformRestraint2</type>
-            </li>
-            <li>
-              <offset>(-.2, 0, -.45)</offset>
-              <type>PlatformRestraint3</type>
-            </li>
-          </attachPoints>
-        </dessicatedBodyGraphicData>
         <silhouetteGraphicData>
           <texPath>Things/Pawn/Fleshybeast/newborn_menuicon</texPath>
           <graphicClass>Graphic_Single</graphicClass>
@@ -107,6 +85,50 @@
       <li>
         <def>tfInfection_entity</def>
       </li>
+    </startingHediffs>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>tfPolymeri</defName>
+    <label>Flesh Mind</label>
+    <race>tfPolymeri</race>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+    <combatPower>650</combatPower>
+    <isBoss>true</isBoss>
+    <allowOldAgeInjuries>false</allowOldAgeInjuries>
+    <immuneToGameConditionEffects>true</immuneToGameConditionEffects>
+    <preventIdeo>true</preventIdeo>
+    <canStrip>false</canStrip>
+    <immuneToTraps>true</immuneToTraps>
+    <collidesWithPawns>false</collidesWithPawns>
+    <ignoresPainShock>true</ignoresPainShock>
+    <abilities>
+      <li>Heatspikes</li>
+    </abilities>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/fleshmind</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfBlessingOfHorax</def>
+        <severity>1</severity>
+      </li>
+      <li>
+        <def>HoraxianInvisibility</def>
+      </li>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+      <!--<li>
+        <def>CoveredInFirefoam</def>
+      </li>-->
     </startingHediffs>
   </PawnKindDef>
 </Defs>

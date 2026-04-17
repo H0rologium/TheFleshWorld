@@ -39,4 +39,58 @@
       <researchPrerequisite>tfDieVest</researchPrerequisite>
     </recipeMaker>
   </ThingDef>
+
+  <ThingDef ParentName="SerumBase">
+    <defName>tfFOLSerum</defName>
+    <label>Gift of Horax</label>
+    <description>A syringe of anomalous mechanites ready to be injected into a user. These mechanites utilize the healing properties of twisted mechanites, primarily focusing on restoring older wounds like scars.\n\nThis serum is sometimes called 'The Font of Life', restoring scars and grievous wounds, restoring the user to a former state of youthful health.</description>
+    <graphicData>
+      <texPath>Things/Item/thefont</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>4</stackLimit>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>1000</MarketValue>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <Mass>0.1</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <ingestible>
+        <outcomeDoers>
+            <li Class="TheFlesh.IngestionOutcomeDoer_FontOfLife" />
+        </outcomeDoers>
+    </ingestible>
+    <comps Inherit="False">
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useLabel>Use {0_label}</useLabel>
+        <useJob>Ingest</useJob>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_Drug">
+          <chemical>mechPurgerPillsChem</chemical>
+          <addictiveness>0.0</addictiveness>
+          <minToleranceToAddict>1.0</minToleranceToAddict>
+          <existingAddictionSeverityOffset>0.0</existingAddictionSeverityOffset>
+          <listOrder>36</listOrder>
+      </li>
+    </comps>
+    <costList>
+      <Neutroamine>20</Neutroamine>
+      <Shard>4</Shard>
+      <Bioferrite>44</Bioferrite>
+      <MedicineUltratech>2</MedicineUltratech>
+    </costList>
+    <recipeMaker>
+      <workAmount>1080</workAmount>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>tfBossDrops</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
 </Defs>

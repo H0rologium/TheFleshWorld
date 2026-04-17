@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <FleckDef ParentName="FleckBase">
+    <defName>tFleshMindDeath</defName>
+    <graphicData>
+      <texPath>Things/Pawn/Fleshybeast/fleshmind</texPath>
+      <shaderType>RevenantDeath</shaderType>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <renderInstanced>false</renderInstanced>
+      <color>(1, 1, 1, 1)</color>
+      <drawSize>(4, 4)</drawSize>
+      <shaderParameters>
+        <_DissolveTex>/Things/Mote/DownUpDissolveNoise</_DissolveTex>
+      </shaderParameters>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0</fadeInTime>
+    <solidTime>6</solidTime>
+    <fadeOutTime>1</fadeOutTime>
+  </FleckDef>
+</Defs>

@@ -52,7 +52,7 @@
         <prerequisites>
             <li>SerumSynthesis</li>
         </prerequisites>
-        <knowledgeCost>60</knowledgeCost>
+        <knowledgeCost>20</knowledgeCost>
         <knowledgeCategory>Advanced</knowledgeCategory>
         <researchViewX>5.5</researchViewX>
         <researchViewY>3.4</researchViewY>

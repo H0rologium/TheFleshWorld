@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>tfMechPurger</defName>
+        <label>Mechanite Purging Lattice</label>
+        <description>A housing unit for modified mechanites. These mechanites are capable of defending the body from future mechanite intrustions.</description>
+        <costList>
+            <Bioferrite>30</Bioferrite>
+            <Shard>1</Shard>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>2</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+        <tradeTags Inherit="False" />
+        <genericMarketSellable>false</genericMarketSellable>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+            <unfinishedThingDef>UnfinishedHealthItemGhoul</unfinishedThingDef>
+            <researchPrerequisite>tfBossDrops</researchPrerequisite>
+            <recipeUsers Inherit="False">
+                <li>BioferriteShaper</li>
+            </recipeUsers>
+            <displayPriority>168</displayPriority>
+        </recipeMaker>
+    </ThingDef>
+
+</Defs>

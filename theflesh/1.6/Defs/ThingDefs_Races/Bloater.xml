@@ -5,7 +5,7 @@
         <label>flesh bloater</label>
         <description>What do you get when the flesh infects a gorehulk? A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. This creature doesn't hurt a lot until it dies, where it explodes into a mess.</description>
         <statBases>
-        <MoveSpeed>3.0</MoveSpeed>
+        <MoveSpeed>2.9</MoveSpeed>
         <MinimumContainmentStrength>70</MinimumContainmentStrength>
         <ToxicResistance>0.5</ToxicResistance>
         <ArmorRating_Sharp>0.4</ArmorRating_Sharp>

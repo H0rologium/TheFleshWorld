@@ -31,4 +31,34 @@
         <addsHediff>tfTwistGutHediff</addsHediff>
     </RecipeDef>
 
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstalltfMechPurger</defName>
+        <label>install mechanite puring lattice</label>
+        <description>Install a mechanite puring lattice.</description>
+        <descriptionHyperlinks>
+            <ThingDef>tfMechPurger</ThingDef>
+            <HediffDef>tfMechanitePurgerAdv</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing mechanite puring lattice.</jobString>
+        <ingredients>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>tfMechPurger</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+        </li>
+        </ingredients>
+        <fixedIngredientFilter>
+        <thingDefs>
+            <li>tfMechPurger</li>
+        </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>tfMechanitePurgerAdv</addsHediff>
+  </RecipeDef>
+
 </Defs>

@@ -8,6 +8,13 @@
                     <li>tfNewborn</li>
                 </value>
             </li>
+            <!--<li Class="PatchOperationAdd">
+                <xpath>Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath>
+                <value>
+                    <li>tfBloater</li>
+                    <li>tfSpiker</li>
+                </value>
+            </li> Cannot work due to codexentrydefs needing exclusive ownership of linked things -->
         </operations>
     </Operation>
 </Patch>

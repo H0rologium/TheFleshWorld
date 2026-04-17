@@ -57,14 +57,18 @@
         <label>Flesh Mind</label>
         <description>In culminations of archotech influence, massive amounts of twisted mechanites can shape mass into Flesh Minds. These horrid entities are a semi-direct extension of Horaxian influence.</description>
         <category>Ultimate</category>
+        <discoveryType>BecameVisible</discoveryType>
         <uiIconPath>UI/CodexIcons/fleshmindCodexIcon</uiIconPath>
-        <!--<linkedThings>
-            <li></li>
-        </linkedThings>-->
+        <linkedThings>
+            <li>tfPolymeri</li>
+        </linkedThings>
         <discoveredResearchProjects>
             <li>tfBossDrops</li>
         </discoveredResearchProjects>
         <orderInCategory>167</orderInCategory>
+        <hideInPlaystyles>
+            <li>AmbientHorror</li>
+        </hideInPlaystyles>
     </EntityCodexEntryDef>
 
 </Defs>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+     <EffecterDef><!--All for ONE LINE, HAHAHA-->
+    <defName>tFleshMindDeath</defName>
+    <maintainTicks>300</maintainTicks>
+    <children>
+      
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>HoraxianBurstDistortionSmall</fleckDef>
+        <burstCount>1</burstCount>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionRadius>0</positionRadius>
+        <scale>.01</scale>
+        <rotation>0</rotation>
+        <rotationRate>0</rotationRate>
+        <absoluteAngle>True</absoluteAngle>
+        <positionOffset>(0, 0, 0)</positionOffset>
+        <angle>0</angle>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+        <speed>0</speed>
+      </li>
+
+      <li>
+        <subEffecterClass>SubEffecter_CameraShakeSingle</subEffecterClass>
+        <cameraShake>.5</cameraShake>
+        <distanceAttenuationScale>1</distanceAttenuationScale>
+      </li>
+      
+      <!-- DISSOLVING BODY -->
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>tFleshMindDeath</fleckDef>
+        <burstCount>1</burstCount>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionRadius>0</positionRadius>
+        <scale>1</scale>
+        <rotation>0</rotation>
+        <rotationRate>0</rotationRate>
+        <absoluteAngle>True</absoluteAngle>
+        <positionOffset>(0, 0, 0)</positionOffset>
+        <angle>0</angle>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+        <speed>0</speed>
+      </li>
+      
+      <!-- EARLY DRIPS, STARTING AT FOOT -->
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RevenantDeathDrip1</fleckDef>
+        <lifespanMaxTicks>60</lifespanMaxTicks>
+        <burstCount>1~2</burstCount>
+        <chancePerTick>.05</chancePerTick>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionRadius>.15</positionRadius>
+        <scale>.5</scale>
+        <rotation>0</rotation>
+        <rotationRate>0</rotationRate>
+        <absoluteAngle>True</absoluteAngle>
+        <positionOffset>(0, 0, -1)</positionOffset>
+        <angle>0</angle>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+        <speed>0</speed>
+      </li>
+
+      <!-- MID DRIPS, STARTING AT MID_SECTION -->
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RevenantDeathDrip2</fleckDef>
+        <initialDelayTicks>60</initialDelayTicks>
+        <lifespanMaxTicks>120</lifespanMaxTicks>
+        <burstCount>3~6</burstCount>
+        <chancePerTick>.1</chancePerTick>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionRadius>.22</positionRadius>
+        <scale>.5</scale>
+        <rotation>0</rotation>
+        <rotationRate>0</rotationRate>
+        <absoluteAngle>True</absoluteAngle>
+        <positionOffset>(0, 0, -1)</positionOffset>
+        <angle>0</angle>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+        <speed>0</speed>
+      </li>
+
+      <!-- MID_HIGH DRIPS, STARTING AT HIGH_BODY -->
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RevenantDeathDrip3</fleckDef>
+        <initialDelayTicks>120</initialDelayTicks>
+        <lifespanMaxTicks>200</lifespanMaxTicks>
+        <burstCount>2~4</burstCount>
+        <chancePerTick>.1</chancePerTick>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionRadius>.25</positionRadius>
+        <scale>.5</scale>
+        <rotation>0</rotation>
+        <rotationRate>0</rotationRate>
+        <absoluteAngle>True</absoluteAngle>
+        <positionOffset>(0, 0, -1)</positionOffset>
+        <angle>0</angle>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+        <speed>0</speed>
+      </li>
+
+      
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+        <fleckDef>RevenantDeathPuddle</fleckDef>
+        <burstCount>1</burstCount>
+        <initialDelayTicks>45</initialDelayTicks>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionRadius>0</positionRadius>
+        <scale>.5</scale>
+        <rotation>0~360</rotation>
+        <rotationRate>0</rotationRate>
+        <absoluteAngle>True</absoluteAngle>
+        <positionOffset>(0, 0, -.75)</positionOffset>
+        <angle>0</angle>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+        <speed>0</speed>
+      </li>
+      
+    </children>
+  </EffecterDef>
+</Defs>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BaseFleshbeast">
+    <defName>tfPolymeri</defName>
+    <label>Flesh Mind</label>
+    <description>A flesh mind is formed when the influence of horax is more directly forced onto various anomalies. These creatures are to be regarded as especially dangerous. Similar to dreadmelds, flesh minds hide themselves away in underground lairs, where horaxian influence can spread from them like a beacon. It is theorized that the great energy that created these abominations was far from unintentional.</description>
+    <statBases>
+      <MoveSpeed>1.7</MoveSpeed>
+      <PsychicSensitivity>1</PsychicSensitivity>
+      <ToxicResistance>1</ToxicResistance>
+      <ArmorRating_Sharp>0.67</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.56</ArmorRating_Blunt>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshybeast/fleshmind_menuicon</uiIconPath>
+    <race>
+      <body>tfBodyFleshmind</body>
+      <baseBodySize>6</baseBodySize>
+      <baseHealthScale>10</baseHealthScale>
+      <lifeExpectancy>50</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Dreadmeld_Moving</soundMoving>
+      <deathAction Class="DeathActionProperties_Divide">
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnKindAdditionalForced>
+          <li>tfSpiker</li>
+          <li>tfBloater</li>
+          <li>Bulbfreak</li>
+        </dividePawnKindAdditionalForced>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Dreadmeld_Wounded</soundWounded>
+          <soundDeath>Pawn_Revenant_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Dreadmeld_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>left spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+    <comps>
+      <li>
+        <compClass>CompDreadmeld</compClass>
+      </li>
+      <li>
+        <compClass>TheFlesh.CompFleshMind</compClass>
+      </li>
+      <li Class="CompProperties_LetterOnRevealed">
+        <label>Flesh Mind Revealed</label>
+        <text>You've discovered a flesh mind! This mammoth creature seems to be an amalgamation shaped by Horax.\n\nIt appears to have some psychic connection to the fleshmass that supports this cavern. Killing it may destabilize the entire cave system.</text>
+        <letterDef>ThreatBig</letterDef>
+      </li>
+      <li Class="CompProperties_Chimera">
+        <simpleAnimalLabel>Flesh Mind</simpleAnimalLabel>
+      </li>
+      <li Class="CompProperties_Shield">
+        <energyLossPerDamage>0.03</energyLossPerDamage>
+        <energyOnReset>0.5</energyOnReset>
+        <minDrawSize>3</minDrawSize>
+        <maxDrawSize>6</maxDrawSize>
+      </li>
+    </comps>
+    <killedLeavings>
+      <Shard>6</Shard>
+      <Bioferrite>60</Bioferrite>
+    </killedLeavings>
+  </ThingDef>
+
+</Defs>

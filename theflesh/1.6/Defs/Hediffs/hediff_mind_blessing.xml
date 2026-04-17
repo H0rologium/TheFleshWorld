@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>tfBlessingOfHorax</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Blessing of Horax</label>
+    <defaultLabelColor>(160,3,217)</defaultLabelColor>
+    <description>A dark archotech has not only shaped this abomination, but blessed it with horrid gifts.</description>
+    <makesSickThought>false</makesSickThought>
+    <tendable>false</tendable>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+      <li>
+        <compClass>TheFlesh.HoraxBlessing</compClass>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <painOffset>-0.44</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

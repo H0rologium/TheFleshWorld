@@ -11,6 +11,7 @@
                     <xpath>Defs/FactionDef[defName="Entities"]/pawnGroupMakers/li[kindDef="Fleshbeasts"]/options</xpath>
                     <value>
                         <tfBloater>3</tfBloater>
+                        <tfSpiker>5</tfSpiker>
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">
@@ -24,6 +25,7 @@
                     <xpath>Defs/FactionDef[defName="Entities"]/pawnGroupMakers/li[kindDef="FleshbeastsWithDreadmeld"]/options</xpath>
                     <value>
                         <tfBloater>4</tfBloater>
+                        <tfSpiker>4</tfSpiker>
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">
