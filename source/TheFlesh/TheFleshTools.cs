@@ -64,6 +64,11 @@ namespace TheFlesh
             return (curGameHour >= 5f && curGameHour <= 18f);
         }
 
+        public static bool isDawning(float curGameHour)
+        {
+            return (curGameHour >= 3f && curGameHour < 5f);
+        }
+
         public static bool isReadytoDie(Pawn victim)
         {
             return !(victim.HasDeathRefusalOrResurrecting || victim.Deathresting);

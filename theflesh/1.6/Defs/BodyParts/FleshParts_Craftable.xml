@@ -4,7 +4,7 @@
     <ThingDef ParentName="BodyPartBionicBase">
         <defName>tfTwistGut</defName>
         <label>twisted stomach</label>
-        <description>An installed twisted stomach. It is better than a biological stomach in almost every way. The contained mechanites produce a closed loop of nutrition through fabrication of twisted flesh inside of the stomach.</description>
+        <description>An installed twisted stomach. It is better than a biological stomach in almost every way. The contained mechanites produce a closed loop of nutrition through fabrication of twisted flesh inside of the stomach.\n\nWhile the nutrition is enough to sustain a person, the periodic aftertaste of rotting meat can leave them constantly unhappy.</description>
         <descriptionHyperlinks><RecipeDef>InstalltfTwistGut</RecipeDef></descriptionHyperlinks>
         <statBases>
             <Mass>3</Mass>

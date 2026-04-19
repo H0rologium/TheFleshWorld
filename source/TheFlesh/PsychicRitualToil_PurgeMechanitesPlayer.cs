@@ -8,6 +8,7 @@ namespace TheFlesh
 {
     public class PsychicRitualToil_PurgeMechanitesPlayer : PsychicRitualToil
     {
+        private const float WEAKEN_THRESHOLD = 0.55f;
         public PsychicRitualToil_PurgeMechanitesPlayer(PsychicRitualRoleDef invokerRole)
         {
             this.invokerRole = invokerRole;
@@ -22,12 +23,12 @@ namespace TheFlesh
             }
             if (TheFleshTools.anomalyShutOff()) return;
             this.CleanMechanites(psychicRitual);
-            Find.LetterStack.ReceiveLetter("CleanRitualCompleteLabel".Translate(psychicRitual.def.label), "CleanRitualCompleteText".Translate(pawn, psychicRitual.def.Named("RITUAL")), LetterDefOf.PositiveEvent,LookTargets.Invalid, null, null, null, null, 0, true);
+            Find.LetterStack.ReceiveLetter("CleanRitualCompleteLabel".Translate(psychicRitual.def.label), "CleanRitualCompleteText".Translate(pawn, psychicRitual.def.Named("RITUAL"),(psychicRitual.PowerPercent>=WEAKEN_THRESHOLD ? $" {"AdditionalRitualRewardTF".Translate()}" : string.Empty)), LetterDefOf.PositiveEvent,LookTargets.Invalid, null, null, null, null, 0, true);
         }
 
         private void CleanMechanites(PsychicRitual rit)
         {
-            //float effectiveness = rit.PowerPercent;
+            float effectiveness = rit.PowerPercent;
             List<Pawn> aberrants = rit.Map.mapPawns.AllPawnsSpawned.ToList<Pawn>();
             while (aberrants.Count > 0)
             {
@@ -35,7 +36,11 @@ namespace TheFlesh
                 if (TheFleshTools.isInfected(potential))
                 {
                     potential.health.RemoveHediff(potential.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfInfection));
-                    //if (effectiveness < 0.49f) potential.health.
+                    
+                }
+                if (effectiveness >= WEAKEN_THRESHOLD && TheFleshTools.isInfected(potential,true))
+                {
+                    potential.health.AddHediff(InternalDefOf.tfHoraxWeaken);
                 }
             }
         }

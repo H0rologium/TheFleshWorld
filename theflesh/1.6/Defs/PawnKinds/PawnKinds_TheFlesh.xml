@@ -71,7 +71,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshybeast/spiker</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1</drawSize>
+          <drawSize>2</drawSize>
           <drawOffset>(0, 0, 0.1)</drawOffset>
         </bodyGraphicData>
         <silhouetteGraphicData>

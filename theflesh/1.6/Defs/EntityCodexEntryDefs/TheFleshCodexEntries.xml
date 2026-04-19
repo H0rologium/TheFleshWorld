@@ -20,7 +20,7 @@
     </EntityCodexEntryDef>
     <EntityCodexEntryDef>
         <defName>FleshDayBreak</defName>
-        <label>red sun</label>
+        <label>Twisted Sun</label>
         <description>A phenomena where twisted mechanites fill the sky, using light as a vector for transmission. Indirect roofing and remaining inside can protect creatures from the deadly effects.</description>
         <category>Advanced</category>
         <uiIconPath>UI/CodexIcons/FleshDayBreak</uiIconPath>

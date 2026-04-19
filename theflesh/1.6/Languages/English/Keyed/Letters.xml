@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+    <TwistedSunAlertLBL_Active>Twisted Sun Risen</TwistedSunAlertLBL_Active>
+    <TwistedSunAlertLBL_Inactive>Twisted Sun Set</TwistedSunAlertLBL_Inactive>
+    <TwistedSunAlertLBL_Incoming>Twisted Sun Incoming</TwistedSunAlertLBL_Incoming>
+    <TwistedSunAlertTXT_Incoming>A twisted sun will soon rise. Find shelter indoors immediately.</TwistedSunAlertTXT_Incoming>
+    <TwistedSunAlertTXT_Active>The twisted sun has risen. Anyone outside will begin a horrid, rapid transformation.</TwistedSunAlertTXT_Active>
+    <TwistedSunAlertTXT_Inactive>The twisted sun has set until morning, around 05:00. Caution should still be taken and ventures outside should only happen if absolutely necessary.</TwistedSunAlertTXT_Inactive>
     <TwistedSunArrivedLabel>Twisted Sun Rises</TwistedSunArrivedLabel>
     <TwistedSunArrivedText>The atmosphere begins to be cut with a sudden red brilliance. The twisted sun has risen.\n\nRemain indoors at all times. During night, ventures may be made outside at the risk of the individual.</TwistedSunArrivedText>
     <TwistedSunNightfall>The sun has set for now. It is relatively safe to go outside until the next morning</TwistedSunNightfall>
     <TwistedSunMorning>The sun will rise within an hour or two! Get back inside!</TwistedSunMorning>
     <CleanRitualCompleteLabel>{0} complete</CleanRitualCompleteLabel>
-    <CleanRitualCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. The archotech will cleanse the area of twisted mechanites.</CleanRitualCompleteText>
+    <CleanRitualCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. The archotech will soon cleanse the area of twisted mechanites.{1}</CleanRitualCompleteText>
     <AnimalInfectMessage>Something is out there...</AnimalInfectMessage>
     <SingleVisitorArrivesFleshprise>{PAWN_titleIndef} from {1} is visiting the colony.\n\n{PAWN_pronoun} is named {PAWN_nameFull}.</SingleVisitorArrivesFleshprise>
     <GroupVisitorsArriveFleshprise>A group from {0} are visiting the colony.</GroupVisitorsArriveFleshprise>
     <FleshMindReveal>A Flesh Mind has appeared!</FleshMindReveal>
     <HealCauseLabel>Twisted Mechanites</HealCauseLabel>
+    <AdditionalRitualRewardTF>Due to a high ritual quality, fleshbeasts in the area will also be weakened.</AdditionalRitualRewardTF>
+    <AdditionalRitualRewardTFREQ>At this ritual quality, any fleshbeasts spawned on the map will also be weakened for a medium duration.</AdditionalRitualRewardTFREQ>
+
+
+    <TFMS_RESTART>Requires a Game Restart to Apply Changes.\n\n</TFMS_RESTART>
+    <TFMS_Fingers>Fingerspikes will not be infected with twisted mechanites if this is disabled</TFMS_Fingers>
 </LanguageData>

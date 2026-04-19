@@ -20,6 +20,7 @@ namespace TheFlesh
         public static HediffDef tfInfection;
         public static HediffDef tfInfection_entity;
         public static HediffDef tfMechanitePurgerAdv;
+        public static HediffDef tfHoraxWeaken;
 
         public static PawnKindDef tfNewborn;
         public static PawnKindDef tfBloater;

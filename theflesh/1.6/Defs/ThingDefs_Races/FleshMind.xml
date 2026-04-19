@@ -44,7 +44,7 @@
           <li>Stab</li>
         </capacities>
         <power>14</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>1.6</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
         <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
@@ -56,7 +56,7 @@
           <li>Stab</li>
         </capacities>
         <power>14</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>1.6</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
         <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
@@ -67,7 +67,7 @@
           <li>Blunt</li>
         </capacities>
         <power>3</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>1.6</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>

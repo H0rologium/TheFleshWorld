@@ -15,7 +15,7 @@
         <uiIconPath>Things/Pawn/Fleshybeast/spiker_menuicon</uiIconPath>
         <race>
         <body>Trispike</body>
-        <baseBodySize>0.6</baseBodySize>
+        <baseBodySize>1</baseBodySize>
         <baseHealthScale>0.6</baseHealthScale>
         <lifeExpectancy>10</lifeExpectancy>
         <deathAction Class="DeathActionProperties_Divide">
@@ -74,7 +74,7 @@
                     <li>Stab</li>
                 </capacities>
                 <power>2</power>
-                <cooldownTime>0.8</cooldownTime>
+                <cooldownTime>1.1</cooldownTime>
                 <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
                 <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
@@ -86,7 +86,7 @@
                     <li>Stab</li>
                 </capacities>
                 <power>2</power>
-                <cooldownTime>0.8</cooldownTime>
+                <cooldownTime>1.1</cooldownTime>
                 <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
                 <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>

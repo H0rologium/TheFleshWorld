@@ -50,8 +50,8 @@ namespace TheFlesh
             Hediff hasRage = entity.health.hediffSet.GetFirstHediffOfDef(buffDefs[1]);
             if (hasFrenzy == null) { addBuffToEntity(entity, buffDefs[0]); hasFrenzy = entity.health.hediffSet.GetFirstHediffOfDef(buffDefs[0]); }
             if (hasRage == null) { addBuffToEntity(entity, buffDefs[1]); hasRage = entity.health.hediffSet.GetFirstHediffOfDef(buffDefs[1]); }
-            hasFrenzy.Severity += 0.1f;
-            hasRage.Severity += 0.1f;
+            hasFrenzy.Severity += 0.02f;
+            hasRage.Severity += 0.02f;
         }
         private void addBuffToEntity(Pawn entity, HediffDef bta) => entity.health.AddHediff(bta);
 

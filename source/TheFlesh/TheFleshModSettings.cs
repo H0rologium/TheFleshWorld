@@ -65,9 +65,9 @@ namespace TheFlesh
             
             lst.GapLine();
 
-            lst.CheckboxLabeled("Fingerspikes are also infected", ref settings.allowInfectedFingerspikes, "<color=#f57842>Requires a Game Restart to Apply Changes.</color>\n\nFingerspikes will not be infected with twisted mechanites if this is disabled");
-            lst.CheckboxLabeled("Enable Surprises", ref settings.enableSurpriseVisits, "Sometimes someone can show up and be hiding a dangerous secret. Does not occur with wanderer / refugee join events.");
-            lst.CheckboxLabeled("Nerf Elite Drops", ref settings.lesserMindDrop, "If enabled, nerfs miniboss drops from Persona Core to 5 Shards instead. This is in addition to its normal drops.");
+            lst.CheckboxLabeled("Fingerspikes are also infected", ref settings.allowInfectedFingerspikes, $"<color=#f57842>{"TFMS_RESTART".Translate()}</color>{"TFMS_Fingers".Translate()}");
+            lst.CheckboxLabeled("Enable Surprises", ref settings.enableSurpriseVisits, "Sometimes someone can show up and be hiding a dangerous secret. Does not occur with colonist join events.");
+            lst.CheckboxLabeled("Nerf Elite Drops", ref settings.lesserMindDrop, "If enabled, nerfs boss drops from Persona Core to 5 Shards instead. This is in addition to its normal drops.");
            
 
 

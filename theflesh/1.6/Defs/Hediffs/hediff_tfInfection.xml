@@ -6,7 +6,7 @@
     <hediffClass>HediffWithComps</hediffClass>
     <label>Twisted Mechanites</label>
     <defaultLabelColor>(233,129,69)</defaultLabelColor>
-    <description>Activated mechanites that are twisted by a dark archotech. Their function has been repurposed to rearranging mass, eventually warping any creature with flesh into abominations.</description>
+    <description>Activated mechanites that are twisted by a dark archotech. Their function has been repurposed to rearranging mass, eventually warping any creature with flesh into abominations.\n\nOnce the infection has reached the reshaping stage, the transformation will complete upon the carrier's death.</description>
     <makesSickThought>true</makesSickThought>
     <lethalSeverity>1</lethalSeverity>
     <tendable>true</tendable>
@@ -21,7 +21,7 @@
         <immunityPerDaySick>0.5388</immunityPerDaySick>
         <immunityPerDayNotSick>-0.5</immunityPerDayNotSick>
       </li>
-      <li Class="HediffCompProperties"><!--Also determines stage thresholds-->
+      <li Class="HediffCompProperties">
         <compClass>TheFlesh.HediffCompTMInfection</compClass>
       </li>
       <li Class="HediffCompProperties_DisappearsOnDeath" />
