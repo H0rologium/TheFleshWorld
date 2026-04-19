@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Threading.Tasks;
 using Verse;
 using Verse.Sound;
 
@@ -32,8 +33,13 @@ namespace TheFlesh
             {
                 if (!TheFleshTools.isReadytoDie(parent.pawn)) return;
             }
-            //removeHediff(); updated to do this in the def.
-            parent.pawn.Corpse.Destroy(DestroyMode.Vanish);
+            this.PostNotifyPawnDied(parent.pawn);
+        }
+
+        private async void PostNotifyPawnDied(Pawn pawn)
+        {
+            await Task.Delay(10);
+            pawn.Corpse.Destroy(DestroyMode.Vanish);
         }
 
         private void removeHediff() => parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfInfection));
