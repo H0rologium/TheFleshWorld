@@ -3,7 +3,7 @@
     <FleckDef ParentName="FleckBase">
     <defName>tFleshMindDeath</defName>
     <graphicData>
-      <texPath>Things/Pawn/Fleshybeast/fleshmind</texPath>
+      <texPath>Things/Pawn/Fleshybeast/fleshmind_south</texPath>
       <shaderType>RevenantDeath</shaderType>
       <graphicClass>Graphic_FleckPulse</graphicClass>
       <renderInstanced>false</renderInstanced>

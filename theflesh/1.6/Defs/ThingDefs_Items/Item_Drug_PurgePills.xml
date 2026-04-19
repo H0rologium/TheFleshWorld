@@ -13,9 +13,9 @@
         <socialPropernessMatters>true</socialPropernessMatters>
         <tickerType>Rare</tickerType>
         <statBases>
-        <MarketValue>1500</MarketValue>
-        <Mass>0.1</Mass>
-        <DeteriorationRate>8</DeteriorationRate>
+            <MarketValue>1500</MarketValue>
+            <Mass>0.1</Mass>
+            <DeteriorationRate>8</DeteriorationRate>
         </statBases>
         <techLevel>Spacer</techLevel>
         <recipeMaker>
@@ -33,6 +33,7 @@
             <Shard>1</Shard>
             <Bioferrite>20</Bioferrite>
         </costList>
+        <thingSetMakerTags />
         <ingestible>
             <baseIngestTicks>80</baseIngestTicks>
             <chairSearchRadius>4</chairSearchRadius>
@@ -61,10 +62,9 @@
 
     <ChemicalDef>
         <defName>mechPurgerPillsChem</defName>
-        <label>Mechanite Neutralization Pills</label>
-        <addictionHediff>AmbrosiaAddiction</addictionHediff>
-        <toleranceHediff>AmbrosiaTolerance</toleranceHediff>
+        <label>Modified Twisted Mechanites</label>
         <onGeneratedAddictedToleranceChance>0.0</onGeneratedAddictedToleranceChance>
         <generateAddictionGenes>false</generateAddictionGenes>
+        <canBeAddicted>false</canBeAddicted>
     </ChemicalDef>
 </Defs>

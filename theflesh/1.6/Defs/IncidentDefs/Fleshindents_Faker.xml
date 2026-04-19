@@ -9,7 +9,8 @@
         </targetTags>
         <workerClass>TheFlesh.IncidentWorker_tfFakeVisitorGroup</workerClass>
         <category>FactionArrival</category>
-        <baseChance>2</baseChance>
+        <baseChance>1.6</baseChance>
+        <minAnomalyThreatLevel>1</minAnomalyThreatLevel>
         <pointsScaleable>true</pointsScaleable>
         <requireColonistsPresent>True</requireColonistsPresent>
     </IncidentDef>

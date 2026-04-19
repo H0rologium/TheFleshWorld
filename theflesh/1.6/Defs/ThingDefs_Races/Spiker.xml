@@ -12,7 +12,7 @@
             <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
             <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
         </statBases>
-        <uiIconPath>Things/Pawn/Fleshybeast/spiker</uiIconPath>
+        <uiIconPath>Things/Pawn/Fleshybeast/spiker_menuicon</uiIconPath>
         <race>
         <body>Trispike</body>
         <baseBodySize>0.6</baseBodySize>

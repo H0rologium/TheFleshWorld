@@ -9,6 +9,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
+    <stackLimit>5</stackLimit>
     <comps>
       <li Class="CompProperties_UseEffectAddHediff">
         <hediffDef>FibrousMechanites</hediffDef>
@@ -31,6 +32,7 @@
       <Meat_Twisted>20</Meat_Twisted>
       <Bioferrite>20</Bioferrite>
     </costList>
+    <thingSetMakerTags />
     <recipeMaker>
       <workAmount>1080</workAmount>
       <skillRequirements>
@@ -38,6 +40,7 @@
       </skillRequirements>
       <researchPrerequisite>tfDieVest</researchPrerequisite>
     </recipeMaker>
+    <allowedArchonexusCount>5</allowedArchonexusCount>
   </ThingDef>
 
   <ThingDef ParentName="SerumBase">
@@ -52,11 +55,12 @@
     <stackLimit>4</stackLimit>
     <statBases>
       <MaxHitPoints>30</MaxHitPoints>
-      <MarketValue>1000</MarketValue>
+      <MarketValue>3000</MarketValue>
       <DeteriorationRate>1.0</DeteriorationRate>
       <Mass>0.1</Mass>
       <Flammability>0.7</Flammability>
     </statBases>
+    <thingSetMakerTags />
     <ingestible>
         <outcomeDoers>
             <li Class="TheFlesh.IngestionOutcomeDoer_FontOfLife" />
@@ -77,6 +81,7 @@
           <minToleranceToAddict>1.0</minToleranceToAddict>
           <existingAddictionSeverityOffset>0.0</existingAddictionSeverityOffset>
           <listOrder>36</listOrder>
+          <isCombatEnhancingDrug>false</isCombatEnhancingDrug>
       </li>
     </comps>
     <costList>
@@ -92,5 +97,6 @@
       </skillRequirements>
       <researchPrerequisite>tfBossDrops</researchPrerequisite>
     </recipeMaker>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
   </ThingDef>
 </Defs>

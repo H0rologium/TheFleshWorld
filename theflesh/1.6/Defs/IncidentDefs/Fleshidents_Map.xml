@@ -8,7 +8,9 @@
             <li>Map_PlayerHome</li>
         </targetTags>
         <workerClass>TheFlesh.IncidentWorker_AnimalInfectionSingle</workerClass>
-        <baseChance>5</baseChance>
+        <baseChance>2</baseChance>
+        <earliestDay>30</earliestDay>
+        <minAnomalyThreatLevel>1</minAnomalyThreatLevel>
         <minRefireDays>10</minRefireDays>
         <category>ThreatSmall</category>
     </IncidentDef>

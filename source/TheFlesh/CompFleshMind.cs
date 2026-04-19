@@ -36,7 +36,7 @@ namespace TheFlesh
 
         public override void PostExposeData()
         {
-            Scribe_Values.Look<int>(ref this.lastDetectedTick, "lastDetectedTick", 0, false);
+            Scribe_Values.Look<int>(ref this.tfmlastDetectedTick, "tfmlastDetectedTick", 0, false);
         }
 
         public override void CompTick()
@@ -55,11 +55,11 @@ namespace TheFlesh
             }
             if (this.FleshMind.IsHashIntervalTick(7))
             {
-                if (Find.TickManager.TicksGame > this.lastDetectedTick + 1200)
+                if (Find.TickManager.TicksGame > this.tfmlastDetectedTick + 1200)
                 {
                     this.CheckDetected();
                 }
-                if (Find.TickManager.TicksGame > this.lastDetectedTick + 1200)
+                if (Find.TickManager.TicksGame > this.tfmlastDetectedTick + 1200)
                 {
                     this.Invisibility.BecomeInvisible(false);
                 }
@@ -91,7 +91,7 @@ namespace TheFlesh
                     {
                         this.Invisibility.BecomeVisible(false);
                     }
-                    this.lastDetectedTick = Find.TickManager.TicksGame;
+                    this.tfmlastDetectedTick = Find.TickManager.TicksGame;
                 }
             }
         }
@@ -120,7 +120,7 @@ namespace TheFlesh
                 return;
             }
             this.Invisibility.BecomeVisible(false);
-            this.lastDetectedTick = Find.TickManager.TicksGame;
+            this.tfmlastDetectedTick = Find.TickManager.TicksGame;
         }
 
         public override void Notify_BecameVisible()
@@ -138,12 +138,12 @@ namespace TheFlesh
             Messages.Message("FleshMindReveal".Translate(), this.FleshMind, MessageTypeDefOf.ThreatBig, true);
             
             CompFleshMind.lastNotified = RealTime.LastRealTime;
-            this.lastDetectedTick = Find.TickManager.TicksGame;
+            this.tfmlastDetectedTick = Find.TickManager.TicksGame;
         }
 
         [Unsaved(false)]
         private HediffComp_Invisibility invisibility;
-        private int lastDetectedTick = -99999;
+        private int tfmlastDetectedTick = -99999;
         private static float lastNotified = -99999f;
     }
 }

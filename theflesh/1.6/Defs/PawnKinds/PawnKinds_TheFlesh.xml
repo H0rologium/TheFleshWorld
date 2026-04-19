@@ -70,8 +70,8 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshybeast/spiker</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
-          <drawSize>0.6</drawSize>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1</drawSize>
           <drawOffset>(0, 0, 0.1)</drawOffset>
         </bodyGraphicData>
         <silhouetteGraphicData>
@@ -109,7 +109,7 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshybeast/fleshmind</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>5</drawSize>
         </bodyGraphicData>
       </li>

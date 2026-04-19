@@ -6,28 +6,23 @@ namespace TheFlesh
 {
     public class TheFleshModSettings : ModSettings
     {
-        public bool alwaysAllyWithStarway;
-        public bool spreadonHit;
-        [Obsolete]
-        public bool instantInfect;
-        public bool allowInfectedFingerspikes;
-        public bool enableSurpriseVisits;
-        public bool lesserMindDrop;
-        public float severityPerHit;
-        public float chanceperhitToApply;
-        public readonly float DEFAULTSEVERITYSETTING = 0.05f;
-        public readonly float DEFAULTCHANCEPERHITSETTING = 0.7f;
+        public bool alwaysAllyWithStarway = true;
+        public bool spreadonHit = true;
+        public bool allowInfectedFingerspikes = true;
+        public bool enableSurpriseVisits = true;
+        public bool lesserMindDrop = false;
+        public float severityPerHit = 0.05f;
+        public float chanceperhitToApply = 0.7f;
 
         public override void ExposeData()
         {
-            Scribe_Values.Look(ref alwaysAllyWithStarway, "alwaysAlly", true);
-            Scribe_Values.Look(ref spreadonHit, "alwaysHitSpread", true);
-            Scribe_Values.Look(ref instantInfect, "instantInfect", false);
-            Scribe_Values.Look(ref enableSurpriseVisits, "enablesurprisevisits", true);
-            Scribe_Values.Look(ref allowInfectedFingerspikes, "allowSickFingers", true);
-            Scribe_Values.Look(ref chanceperhitToApply, "onhitApplyChance", DEFAULTCHANCEPERHITSETTING);
-            Scribe_Values.Look(ref severityPerHit, "tmsevperhit", DEFAULTSEVERITYSETTING);
-            Scribe_Values.Look(ref lesserMindDrop, "tfbossdropmid", false);
+            Scribe_Values.Look(ref alwaysAllyWithStarway, "alwaysAlly");
+            Scribe_Values.Look(ref spreadonHit, "alwaysHitSpread");
+            Scribe_Values.Look(ref enableSurpriseVisits, "enablesurprisevisits");
+            Scribe_Values.Look(ref allowInfectedFingerspikes, "allowSickFingers");
+            Scribe_Values.Look(ref chanceperhitToApply, "onhitApplyChance");
+            Scribe_Values.Look(ref severityPerHit, "tmsevperhit");
+            Scribe_Values.Look(ref lesserMindDrop, "tfbossdropmid");
             base.ExposeData();
         }
     }
@@ -60,10 +55,10 @@ namespace TheFlesh
             
             if (settings.spreadonHit)
             {
-                lst.Label($"Chance per hit to spread infection: %{(settings.chanceperhitToApply * 100f):F0} (The default amount is %{(settings.DEFAULTCHANCEPERHITSETTING * 100f):F0})");
+                lst.Label($"Chance per hit to spread infection: %{(settings.chanceperhitToApply * 100f):F0} (The default amount is %{(settings.chanceperhitToApply * 100f):F0})");
                 settings.chanceperhitToApply = lst.Slider(settings.chanceperhitToApply, 0f, 1f);
 
-                lst.Label($"Severity per hit on infected creatures: %{(settings.severityPerHit * 100f):F0} (The default amount is %{(settings.DEFAULTSEVERITYSETTING * 100f):F0})");
+                lst.Label($"Severity per hit on infected creatures: %{(settings.severityPerHit * 100f):F0} (The default amount is %{(settings.severityPerHit * 100f):F0})");
                 settings.severityPerHit = lst.Slider(settings.severityPerHit, 0f, 1f);
 
             }
@@ -74,10 +69,6 @@ namespace TheFlesh
             lst.CheckboxLabeled("Enable Surprises", ref settings.enableSurpriseVisits, "Sometimes someone can show up and be hiding a dangerous secret. Does not occur with wanderer / refugee join events.");
             lst.CheckboxLabeled("Nerf Elite Drops", ref settings.lesserMindDrop, "If enabled, nerfs miniboss drops from Persona Core to 5 Shards instead. This is in addition to its normal drops.");
            
-            if (false) //Experimental mod options.
-            {
-                lst.CheckboxLabeled("Near-instant conversion", ref settings.instantInfect, "<color=#f57842>WARNING, THIS MAKES THE GAME VERY DIFFICULT</color>\n\nWhen enabled, creatures infected by the Twisted Mechanites will instantly be converted.");
-            }
 
 
 

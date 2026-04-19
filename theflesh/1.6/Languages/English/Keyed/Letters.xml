@@ -10,4 +10,5 @@
     <SingleVisitorArrivesFleshprise>{PAWN_titleIndef} from {1} is visiting the colony.\n\n{PAWN_pronoun} is named {PAWN_nameFull}.</SingleVisitorArrivesFleshprise>
     <GroupVisitorsArriveFleshprise>A group from {0} are visiting the colony.</GroupVisitorsArriveFleshprise>
     <FleshMindReveal>A Flesh Mind has appeared!</FleshMindReveal>
+    <HealCauseLabel>Twisted Mechanites</HealCauseLabel>
 </LanguageData>

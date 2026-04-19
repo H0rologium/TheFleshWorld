@@ -20,7 +20,7 @@ namespace TheFlesh
                 HealthUtility.Cure(latestHediff);
                 if (PawnUtility.ShouldSendNotificationAbout(user))
                 {
-                    Messages.Message("MessagePermanentWoundHealed".Translate("Horax", user.LabelShort, latestHediff.Label, user.Named("PAWN")), user, MessageTypeDefOf.PositiveEvent, true);
+                    Messages.Message("MessagePermanentWoundHealed".Translate("HealCauseLabel".Translate(), user.LabelShort, latestHediff.Label, user.Named("PAWN")), user, MessageTypeDefOf.PositiveEvent, true);
                 }
             }
 
