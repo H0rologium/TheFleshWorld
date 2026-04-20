@@ -44,30 +44,30 @@ namespace TheFlesh
 
             if (ModLister.GetActiveModWithIdentifier("Horo.BTEOTW.betweenthestars", true) != null)
             {
-                lst.Label("<color=#14a82d>Mod integrations - Between the Stars</color>");
-                lst.CheckboxLabeled("Always Ally Starway divisions", ref settings.alwaysAllyWithStarway, "Whenever you generate a new world, starway factions will never be enemies with each other. Turning this setting off allows them to possibly be enemies with each other.");
+                lst.Label($"<color=#14a82d>{"TFMS_MI_BTS_Title".Translate()}</color>");
+                lst.CheckboxLabeled("TFMS_MI_BTS_AASD_Title".Translate(), ref settings.alwaysAllyWithStarway, "TFMS_MI_BTS".Translate());
             }
 
             lst.GapLine();
             
 
-            lst.CheckboxLabeled("Infection spreads through contact", ref settings.spreadonHit, "When enabled, infected creatures can inflict the infection upon hitting another creature, or increase the severity of an existing infection.\n\nDisabling this only disables spread through direct combat.");
+            lst.CheckboxLabeled("TFMS_Contactor_Title".Translate(), ref settings.spreadonHit, "TFMS_Contactor".Translate());
             
             if (settings.spreadonHit)
             {
-                lst.Label($"Chance per hit to spread infection: %{(settings.chanceperhitToApply * 100f):F0} (The default amount is %{(settings.chanceperhitToApply * 100f):F0})");
+                lst.Label($"Chance per hit to spread infection: {(settings.chanceperhitToApply * 100f):F0}% (The default amount is {(settings.chanceperhitToApply * 100f):F0}%)");
                 settings.chanceperhitToApply = lst.Slider(settings.chanceperhitToApply, 0f, 1f);
 
-                lst.Label($"Severity per hit on infected creatures: %{(settings.severityPerHit * 100f):F0} (The default amount is %{(settings.severityPerHit * 100f):F0})");
+                lst.Label($"Severity per hit on infected creatures: {(settings.severityPerHit * 100f):F0}% (The default amount is {(settings.severityPerHit * 100f):F0}%)");
                 settings.severityPerHit = lst.Slider(settings.severityPerHit, 0f, 1f);
 
             }
             
             lst.GapLine();
 
-            lst.CheckboxLabeled("Fingerspikes are also infected", ref settings.allowInfectedFingerspikes, $"<color=#f57842>{"TFMS_RESTART".Translate()}</color>{"TFMS_Fingers".Translate()}");
-            lst.CheckboxLabeled("Enable Surprises", ref settings.enableSurpriseVisits, "Sometimes someone can show up and be hiding a dangerous secret. Does not occur with colonist join events.");
-            lst.CheckboxLabeled("Nerf Elite Drops", ref settings.lesserMindDrop, "If enabled, nerfs boss drops from Persona Core to 5 Shards instead. This is in addition to its normal drops.");
+            lst.CheckboxLabeled("TFMS_Fingers_Title".Translate(), ref settings.allowInfectedFingerspikes, $"<color=#f57842>{"TFMS_RESTART".Translate()}</color>{"TFMS_Fingers".Translate()}");
+            lst.CheckboxLabeled("TFMS_Surprises_Title".Translate(), ref settings.enableSurpriseVisits, "TFMS_Surprises".Translate());
+            lst.CheckboxLabeled("TFMS_NEDrops_Title".Translate(), ref settings.lesserMindDrop, "TFMS_NEDrops".Translate());
            
 
 

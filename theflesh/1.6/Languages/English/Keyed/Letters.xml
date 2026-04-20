@@ -11,7 +11,7 @@
     <TwistedSunNightfall>The sun has set for now. It is relatively safe to go outside until the next morning</TwistedSunNightfall>
     <TwistedSunMorning>The sun will rise within an hour or two! Get back inside!</TwistedSunMorning>
     <CleanRitualCompleteLabel>{0} complete</CleanRitualCompleteLabel>
-    <CleanRitualCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. The archotech will soon cleanse the area of twisted mechanites.{1}</CleanRitualCompleteText>
+    <CleanRitualCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. The archotech will soon cleanse the area of twisted mechanites.{2}</CleanRitualCompleteText>
     <AnimalInfectMessage>Something is out there...</AnimalInfectMessage>
     <SingleVisitorArrivesFleshprise>{PAWN_titleIndef} from {1} is visiting the colony.\n\n{PAWN_pronoun} is named {PAWN_nameFull}.</SingleVisitorArrivesFleshprise>
     <GroupVisitorsArriveFleshprise>A group from {0} are visiting the colony.</GroupVisitorsArriveFleshprise>
@@ -23,4 +23,17 @@
 
     <TFMS_RESTART>Requires a Game Restart to Apply Changes.\n\n</TFMS_RESTART>
     <TFMS_Fingers>Fingerspikes will not be infected with twisted mechanites if this is disabled</TFMS_Fingers>
+    <TFMS_Surprises>Sometimes someone can show up and be hiding a dangerous secret. Does not occur with colonist join events.</TFMS_Surprises>
+    <TFMS_NEDrops>If enabled, nerfs boss drops from Persona Core to 5 Shards instead. This is in addition to its normal drops.</TFMS_NEDrops>
+    <TFMS_Contactor>When enabled, infected creatures can inflict the infection upon hitting another creature, or increase the severity of an existing infection.\n\nDisabling this only disables spread through direct combat, not by other means.</TFMS_Contactor>
+    <TFMS_Fingers_Title>Fingerspikes are also infected</TFMS_Fingers_Title>
+    <TFMS_Surprises_Title>Enable Surprises</TFMS_Surprises_Title>
+    <TFMS_NEDrops_Title>Nerf Elite Drops</TFMS_NEDrops_Title>
+    <TFMS_Contactor_Title>Infection spreads through contact</TFMS_Contactor_Title>
+
+
+
+    <TFMS_MI_BTS>Whenever you generate a new world, starway factions will never be enemies with each other. Turning this setting off allows them to possibly be enemies with each other.</TFMS_MI_BTS>
+    <TFMS_MI_BTS_AASD_Title>Always Ally Starway Divisions</TFMS_MI_BTS_AASD_Title>
+    <TFMS_MI_BTS_Title>Mod integrations - Between the Stars</TFMS_MI_BTS_Title>
 </LanguageData>
