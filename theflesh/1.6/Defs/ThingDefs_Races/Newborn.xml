@@ -50,13 +50,13 @@
             </li>
             <li Class="CompProperties_Studiable">
             <frequencyTicks>160000</frequencyTicks>
-            <knowledgeCategory>Advanced</knowledgeCategory>
+            <knowledgeCategory>Basic</knowledgeCategory>
             <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
             <anomalyKnowledge>2</anomalyKnowledge>
             <requiresHoldingPlatform>true</requiresHoldingPlatform>
             </li>
             <li Class="CompProperties_ProducesBioferrite">
-            <bioferriteDensity>2</bioferriteDensity>
+                <bioferriteDensity>1</bioferriteDensity>
             </li>
         </comps>
         <tools>

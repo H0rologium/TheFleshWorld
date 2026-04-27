@@ -3,7 +3,7 @@
     <ThingDef ParentName="BaseFleshbeast">
         <defName>tfBloater</defName>
         <label>flesh bloater</label>
-        <description>What do you get when the flesh infects a gorehulk? A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. This creature doesn't hurt a lot until it dies, where it explodes into a mess.</description>
+        <description>What do you get when the flesh infects a gorehulk? A horrid oozing mound of flesh, all controlled by a linked nervous system. This creature doesn't hurt a lot until it dies, where it explodes into a mess.</description>
         <statBases>
         <MoveSpeed>2.9</MoveSpeed>
         <MinimumContainmentStrength>70</MinimumContainmentStrength>
@@ -54,12 +54,12 @@
         <li Class="CompProperties_Studiable">
             <frequencyTicks>120000</frequencyTicks>
             <knowledgeCategory>Advanced</knowledgeCategory>
-            <anomalyKnowledge>2.5</anomalyKnowledge>
+            <anomalyKnowledge>2</anomalyKnowledge>
             <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
             <requiresHoldingPlatform>true</requiresHoldingPlatform>
         </li>
         <li Class="CompProperties_ProducesBioferrite">
-            <bioferriteDensity>3</bioferriteDensity>
+            <bioferriteDensity>2</bioferriteDensity>
         </li>
         </comps>
         <tools>

@@ -59,7 +59,7 @@
             <frequencyTicks>120000</frequencyTicks>
             <knowledgeCategory>Basic</knowledgeCategory>
             <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
-            <anomalyKnowledge>2</anomalyKnowledge>
+            <anomalyKnowledge>1.5</anomalyKnowledge>
             <requiresHoldingPlatform>true</requiresHoldingPlatform>
         </li>
         <li Class="CompProperties_ProducesBioferrite">

@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -8,7 +9,8 @@ namespace TheFlesh
     {
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            return !TheFleshTools.anomalyShutOff();
+            GameConditionManager activeConditionManager = parms.target.GameConditionManager;
+            return (!TheFleshTools.anomalyShutOff() && !activeConditionManager.IsAlwaysDarkOutside && !activeConditionManager.ConditionIsActive(GameConditionDefOf.Eclipse));
         }
     }
 }
