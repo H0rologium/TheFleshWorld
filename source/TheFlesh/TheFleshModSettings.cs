@@ -6,16 +6,18 @@ namespace TheFlesh
 {
     public class TheFleshModSettings : ModSettings
     {
+        public bool mi_zerg_enablecarriers = false;
         public bool alwaysAllyWithStarway = true;
         public bool spreadonHit = true;
         public bool allowInfectedFingerspikes = true;
         public bool enableSurpriseVisits = true;
         public bool lesserMindDrop = false;
-        public float severityPerHit = 0.05f;
+        public float severityPerHit = 0.03f;
         public float chanceperhitToApply = 0.7f;
 
         public override void ExposeData()
         {
+            Scribe_Values.Look(ref mi_zerg_enablecarriers, "tfmi_zergcancarrymechanites");
             Scribe_Values.Look(ref alwaysAllyWithStarway, "alwaysAlly");
             Scribe_Values.Look(ref spreadonHit, "alwaysHitSpread");
             Scribe_Values.Look(ref enableSurpriseVisits, "enablesurprisevisits");
@@ -42,23 +44,34 @@ namespace TheFlesh
 
             lst.Begin(inRect);
 
+            lst.GapLine();
+
             if (ModLister.GetActiveModWithIdentifier("Horo.BTEOTW.betweenthestars", true) != null)
             {
                 lst.Label($"<color=#14a82d>{"TFMS_MI_BTS_Title".Translate()}</color>");
                 lst.CheckboxLabeled("TFMS_MI_BTS_AASD_Title".Translate(), ref settings.alwaysAllyWithStarway, "TFMS_MI_BTS".Translate());
+                lst.GapLine();
             }
 
-            lst.GapLine();
             
+
+            if (ModLister.GetActiveModWithIdentifier("mustard1557.musc.zerg", true) != null)
+            {
+                lst.Label($"<color=#14a82d>{"TFMS_MI_ZERG_Title".Translate()}</color>");
+                lst.CheckboxLabeled("TFMS_MI_ZERG_EZC_Title".Translate(), ref settings.mi_zerg_enablecarriers, $"<color=#f57842>{"TFMS_RESTART".Translate()}</color>{"TFMS_MI_ZERG".Translate()}");
+                lst.GapLine();
+            }
+
+
 
             lst.CheckboxLabeled("TFMS_Contactor_Title".Translate(), ref settings.spreadonHit, "TFMS_Contactor".Translate());
             
             if (settings.spreadonHit)
             {
-                lst.Label($"Chance per hit to spread infection: {(settings.chanceperhitToApply * 100f):F0}% (The default amount is {(settings.chanceperhitToApply * 100f):F0}%)");
+                lst.Label($"Chance per hit to spread infection: {(settings.chanceperhitToApply * 100f):F0}% (The default amount is 70%)");
                 settings.chanceperhitToApply = lst.Slider(settings.chanceperhitToApply, 0f, 1f);
 
-                lst.Label($"Severity per hit on infected creatures: {(settings.severityPerHit * 100f):F0}% (The default amount is {(settings.severityPerHit * 100f):F0}%)");
+                lst.Label($"Severity per hit on infected creatures: {(settings.severityPerHit * 100f):F0}% (The default amount is 3%)");
                 settings.severityPerHit = lst.Slider(settings.severityPerHit, 0f, 1f);
 
             }

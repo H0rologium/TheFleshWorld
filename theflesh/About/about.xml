@@ -34,11 +34,12 @@
             <li>Ludeon.Rimworld.Anomaly</li>
             <li>CETeam.CombatExtended</li>
             <li>Horo.BTEOTW.betweenthestars</li>
+            <li>mustard1557.musc.zerg</li>
         </v1.6>
     </loadAfterByVersion>
-    <incompatibleWithByVersion>
+    <!--<incompatibleWithByVersion>
         <v1.6>
             <li>KunogiD.RetouchableVoid</li>
         </v1.6>
-    </incompatibleWithByVersion>
+    </incompatibleWithByVersion>-->
 </ModMetaData>

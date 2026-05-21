@@ -36,4 +36,8 @@
     <TFMS_MI_BTS>Whenever you generate a new world, starway factions will never be enemies with each other. Turning this setting off allows them to possibly be enemies with each other.</TFMS_MI_BTS>
     <TFMS_MI_BTS_AASD_Title>Always Ally Starway Divisions</TFMS_MI_BTS_AASD_Title>
     <TFMS_MI_BTS_Title>Mod integrations - Between the Stars</TFMS_MI_BTS_Title>
+    <TFMS_MI_ZERG>Whether zerg should spawn as twisted mechanite carriers (disabled by default).\n\nThis setting still respects the 'infection spreads through contact' option.</TFMS_MI_ZERG>
+    <TFMS_MI_ZERG_PS></TFMS_MI_ZERG_PS>
+    <TFMS_MI_ZERG_EZC_Title>Zerg carry Twisted Mechanites</TFMS_MI_ZERG_EZC_Title>
+    <TFMS_MI_ZERG_Title>Mod integrations - MUSC_Zerg Mod</TFMS_MI_ZERG_Title>
 </LanguageData>

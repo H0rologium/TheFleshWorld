@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>MUSC_Zerg Mod</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Zergling_Wild"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Zergling_Wild"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Zergling"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Zergling"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Hydralisk_Wild"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Hydralisk_Wild"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Hydralisk"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Hydralisk"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Broodling_Wild"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Broodling_Wild"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Broodling"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Broodling"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Broodling_Larva"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Broodling_Larva"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_WalkingScourge_Wild"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_WalkingScourge_Wild"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_WalkingScourge"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_WalkingScourge"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_InfestedMarine"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_InfestedMarine"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Ulari_Wild"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Ulari_Wild"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_Ulari"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Ulari"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_WingedZergling"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_WingedZergling"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="MUSC_WingedZergling_Wild"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_WingedZergling_Wild"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+
+                <!-- granularity =/= concision unless im really THAT stupid -->
+
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Zergling_Wild"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Zergling"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Hydralisk_Wild"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Hydralisk"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Broodling_Wild"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Broodling"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Broodling_Larva"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_WalkingScourge_Wild"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_WalkingScourge"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_InfestedMarine"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Ulari_Wild"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_Ulari"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_WingedZergling"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+                <li Class="TheFlesh.PatchOperation_IntegrateZerg">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="MUSC_WingedZergling_Wild"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
