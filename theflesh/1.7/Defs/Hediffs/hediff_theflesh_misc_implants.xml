@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>tfMechanitePurgerAdv</defName>
+        <label>Mechanite Lattice</label>
+        <labelNoun>a mechanite implant</labelNoun>
+        <defaultLabelColor>(233,129,69)</defaultLabelColor>
+        <description>An installed lattice of mechanites designed to hold all other mechanites at bay.</description>
+        <descriptionHyperlinks><ThingDef>tfMechPurger</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>tfMechPurger</spawnThingOnRemoved>
+        <stages>
+        <li>
+            <makeImmuneTo>
+                <li>SensoryMechanites</li>
+                <li>FibrousMechanites</li>
+                <li>MuscleParasites</li>
+                <li>tfInfection</li>
+                <li>GutWorms</li>
+            </makeImmuneTo>
+        </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

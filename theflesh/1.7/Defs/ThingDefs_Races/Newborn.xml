@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BaseFleshbeast">
+        <defName>tfNewborn</defName>
+        <label>newborn</label>
+        <description>A monstrous creature that resembles a massive, painfully swollen mound of mass with randomly reconfigured body parts. Near its top is a stretched face that watches its victim with dead eyes. While resembling a gorehulk, newborns have no developed organ to launch spikes, instead their newly twisted bodies excel at finding and lashing out at the nearest target. These creatures are directly aligned with the will of Horax, and are regarded as some sort of natural enemy to other flesh beasts.</description>
+        <statBases>
+            <MoveSpeed>4.4</MoveSpeed>
+            <MinimumContainmentStrength>70</MinimumContainmentStrength>
+            <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+        </statBases>
+        <uiIconPath>Things/Pawn/Fleshybeast/newborn_menuicon</uiIconPath>
+        <race>
+            <body>tfNewbornBody</body>
+            <baseBodySize>2</baseBodySize>
+            <baseHealthScale>2.5</baseHealthScale>
+            <lifeExpectancy>15</lifeExpectancy>
+            <renderTree>Toughspike</renderTree>
+            <canBecomeShambler>true</canBecomeShambler>
+            <lifeStageAges>
+            <li>
+                <def>FullyFormed_Toughspike</def>
+                <soundWounded>Pawn_Fleshbeast_Toughspike_Wounded</soundWounded>
+                <soundDeath>Pawn_Fleshbeast_Toughspike_Death</soundDeath>
+                <soundCall>Pawn_Fleshbeast_Toughspike_Call</soundCall>
+            </li>
+            </lifeStageAges>
+        </race>
+        <comps>
+            <li Class="CompProperties_AttachPoints">
+            <points>
+            <li>
+            <offset>(-.35, 0, .5)</offset>
+            <type>PlatformRestraint0</type>
+            </li>
+            <li>
+            <offset>(.35, 0, .5)</offset>
+            <type>PlatformRestraint1</type>
+            </li>
+            <li>
+            <offset>(.3, 0, -.45)</offset>
+            <type>PlatformRestraint2</type>
+            </li>
+            <li>
+            <offset>(-.3, 0, -.45)</offset>
+            <type>PlatformRestraint3</type>
+            </li>
+            </points>
+            </li>
+            <li Class="CompProperties_Studiable">
+            <frequencyTicks>160000</frequencyTicks>
+            <knowledgeCategory>Basic</knowledgeCategory>
+            <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+            <anomalyKnowledge>2</anomalyKnowledge>
+            <requiresHoldingPlatform>true</requiresHoldingPlatform>
+            </li>
+            <li Class="CompProperties_ProducesBioferrite">
+                <bioferriteDensity>1</bioferriteDensity>
+            </li>
+        </comps>
+        <tools>
+            <li>
+                <label>left flesh club</label>
+                <labelNoLocation>flesh club</labelNoLocation>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.8</cooldownTime>
+                <linkedBodyPartsGroup>LeftFleshClub</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>right flesh club</label>
+                <labelNoLocation>flesh club</labelNoLocation>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.8</cooldownTime>
+                <linkedBodyPartsGroup>RightFleshClub</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>bone spike</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>

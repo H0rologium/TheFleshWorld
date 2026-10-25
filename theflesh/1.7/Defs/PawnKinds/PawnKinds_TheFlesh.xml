@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="BaseTheFleshKind" Abstract="True">
+    <defaultFactionDef>Entities</defaultFactionDef>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    <meleeAttackInfectionPathways>
+      <li>EntityAttacked</li>
+    </meleeAttackInfectionPathways>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseTheFleshKind">
+    <defName>tfBloater</defName>
+    <label>flesh bloater</label>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <race>tfBloater</race>
+    <combatPower>200</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/bloater</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfInfection_entity</def>
+      </li>
+    </startingHediffs>
+  </PawnKindDef>
+
+ <PawnKindDef ParentName="BaseTheFleshKind">
+    <defName>tfNewborn</defName>
+    <label>newborn</label>
+    <race>tfNewborn</race>
+    <combatPower>80</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/newborn</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/newborn_menuicon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfInfection_entity</def>
+      </li>
+    </startingHediffs>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>tfSpiker</defName>
+    <label>spikemound</label>
+    <race>tfSpiker</race>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <abilities>
+      <li>SpikeLaunch_Spikerspike</li>
+    </abilities>
+    <combatPower>67</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/spiker</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+          <drawOffset>(0, 0, 0.1)</drawOffset>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/spiker_menuicon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>0.6</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfInfection_entity</def>
+      </li>
+    </startingHediffs>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>tfPolymeri</defName>
+    <label>Flesh Mind</label>
+    <race>tfPolymeri</race>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+    <combatPower>650</combatPower>
+    <isBoss>true</isBoss>
+    <allowOldAgeInjuries>false</allowOldAgeInjuries>
+    <immuneToGameConditionEffects>true</immuneToGameConditionEffects>
+    <preventIdeo>true</preventIdeo>
+    <canStrip>false</canStrip>
+    <immuneToTraps>true</immuneToTraps>
+    <collidesWithPawns>false</collidesWithPawns>
+    <ignoresPainShock>true</ignoresPainShock>
+    <abilities>
+      <li>Heatspikes</li>
+    </abilities>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/fleshmind</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfBlessingOfHorax</def>
+        <severity>1</severity>
+      </li>
+      <li>
+        <def>HoraxianInvisibility</def>
+      </li>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+      <!--<li>
+        <def>CoveredInFirefoam</def>
+      </li>-->
+    </startingHediffs>
+  </PawnKindDef>
+</Defs>

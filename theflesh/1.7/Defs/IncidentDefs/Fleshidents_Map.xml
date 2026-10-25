@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <IncidentDef>
+        <defName>AnimalIfectionSingle</defName>
+        <label>single animal infection</label>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>TheFlesh.IncidentWorker_AnimalInfectionSingle</workerClass>
+        <baseChance>0.9</baseChance>
+        <earliestDay>30</earliestDay>
+        <minAnomalyThreatLevel>1</minAnomalyThreatLevel>
+        <minRefireDays>10</minRefireDays>
+        <category>ThreatSmall</category>
+    </IncidentDef>
+
+    <IncidentDef ParentName="AnomalyIncidentBase">
+        <defName>FleshSun</defName>
+        <label>twisted sun</label>
+        <category>ThreatBig</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>TheFlesh.IncidentWorker_MakeFleshyGameCondition</workerClass>
+        <gameCondition>FleshDayBreak_Onset</gameCondition>
+        <letterLabel>Twisted Sun</letterLabel>
+        <letterDef>ThreatBig</letterDef>
+        <baseChance>0.16</baseChance>
+        <earliestDay>40</earliestDay>
+        <minAnomalyThreatLevel>2</minAnomalyThreatLevel>
+        <minRefireDays>40</minRefireDays>
+        <disabledWhen>
+            <extremeWeatherIncidentsDisabled>true</extremeWeatherIncidentsDisabled>
+        </disabledWhen>
+        <durationDays>3.1~3.9</durationDays>
+    </IncidentDef>
+
+    <IncidentDef ParentName="AnomalyIncidentBase">
+        <defName>TheFleshDeepenedPitGate</defName>
+        <label>pit lair</label>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>TheFlesh.IncidentWorker_TheFleshPitGate</workerClass>
+        <letterLabel>Pit Lair Opening</letterLabel>
+        <letterText>A wide piece of terrain has begun sinking into the depths, forming a deepening hole. At this rate, it will deepen out of sight within a day. You can hear inhuman shrieks rising from the depths.\n\nSomething seems off about this occurrence.\n\nMove buildings and items away from the emergence point.</letterText>
+        <letterDef>ThreatBig</letterDef>
+        <baseChance>0.35</baseChance>
+        <minThreatPoints>1067</minThreatPoints>
+        <minAnomalyThreatLevel>2</minAnomalyThreatLevel>
+        <category>ThreatBig</category>
+        <minRefireDays>50</minRefireDays>
+    </IncidentDef>
+
+</Defs>

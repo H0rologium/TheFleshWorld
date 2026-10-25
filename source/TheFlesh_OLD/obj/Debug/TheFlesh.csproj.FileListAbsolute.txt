@@ -1,0 +1,7 @@
+F:\Modding\TheFleshWorld\theflesh\1.6\Assemblies\TheFlesh.dll
+F:\Modding\TheFleshWorld\theflesh\1.6\Assemblies\TheFlesh.pdb
+F:\Modding\TheFleshWorld\source\TheFlesh\obj\Debug\TheFlesh.csproj.AssemblyReference.cache
+F:\Modding\TheFleshWorld\source\TheFlesh\obj\Debug\TheFlesh.csproj.CoreCompileInputs.cache
+F:\Modding\TheFleshWorld\source\TheFlesh\obj\Debug\TheFlesh.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\theflesh\1.6\Assemblies\TheFlesh.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\theflesh\1.6\Assemblies\TheFlesh.dll

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Anomaly</li><!--you see, the joke is...-->
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="Fingerspike"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="Fingerspike"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="Bulbfreak"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="Bulbfreak"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="Toughspike"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="Toughspike"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnKindDef[defName="Trispike"]/startingHediffs</xpath>
+                    <nomatch Class="PatchOperationInsert">
+                        <xpath>Defs/PawnKindDef[defName="Trispike"]/lifeStages</xpath>
+                        <value>
+                            <startingHediffs />
+                        </value>
+                    </nomatch>
+                </li>
+                
+                
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[defName="Bulbfreak"]/startingHediffs</xpath>
+                    <value>
+                        <li>
+                            <def>tfInfection_entity</def>
+                        </li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[defName="Toughspike"]/startingHediffs</xpath>
+                    <value>
+                        <li>
+                            <def>tfInfection_entity</def>
+                        </li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[defName="Trispike"]/startingHediffs</xpath>
+                    <value>
+                        <li>
+                            <def>tfInfection_entity</def>
+                        </li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PawnKindDef[defName="Dreadmeld"]/startingHediffs</xpath>
+                    <value>
+                        <li>
+                            <def>tfInfection_entity</def>
+                        </li>
+                    </value>
+                </li>
+                <li Class="TheFlesh.PatchOperation_ILikeMyFingers">
+                    <inner Class="PatchOperationAdd">
+                        <xpath>Defs/PawnKindDef[defName="Fingerspike"]/startingHediffs</xpath>
+                        <value>
+                            <li>
+                                <def>tfInfection_entity</def>
+                            </li>
+                        </value>
+                    </inner>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

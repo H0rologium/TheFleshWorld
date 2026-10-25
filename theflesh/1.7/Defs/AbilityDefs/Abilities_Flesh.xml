@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SpikeLaunchBase">
+        <defName>SpikeLaunch_Spikerspike</defName>
+        <verbProperties>
+        <range>7</range>
+        <defaultProjectile>Spike_Toughspike</defaultProjectile>
+        </verbProperties>
+        <cooldownTicksRange>80</cooldownTicksRange>
+    </AbilityDef>
+    <ThingDef ParentName="SpikeBase">
+        <defName>Spike_Spikerspike</defName>
+        <graphicData>
+            <texPath>Things/Projectile/Projectile_Toughspike</texPath>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>7</damageAmountBase>
+        </projectile>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <EntityCodexEntryDef>
+        <defName>tfCodexBloater</defName>
+        <label>bloaters</label>
+        <description>A further mutation of fleshbeasts, bloaters release stored mechanites in an acidic explosion on death. Stay well away from them if possible.</description>
+        <uiIconPath>UI/CodexIcons/bloaterCodexIcon</uiIconPath>
+        <category>Basic</category>
+        <linkedThings>
+            <li>tfBloater</li>
+        </linkedThings>
+        <discoveredResearchProjects>
+            <li>tfFleshGut</li>
+        </discoveredResearchProjects>
+        <orderInCategory>222</orderInCategory>
+    </EntityCodexEntryDef>
+    <EntityCodexEntryDef>
+        <defName>FleshDayBreak</defName>
+        <label>Twisted Sun</label>
+        <description>A phenomena where twisted mechanites fill the sky, using light as a vector for transmission. Indirect roofing and remaining inside can protect creatures from the deadly effects.</description>
+        <category>Advanced</category>
+        <uiIconPath>UI/CodexIcons/FleshDayBreak</uiIconPath>
+        <linkedIncidents>
+            <li>FleshSun</li>
+        </linkedIncidents>
+        <discoveredResearchProjects>
+            <li>tfPurgePills</li>
+        </discoveredResearchProjects>
+        <provocationIncidents>
+            <li>FleshSun</li>
+        </provocationIncidents>
+        <hideInPlaystyles>
+            <li>AmbientHorror</li>
+        </hideInPlaystyles>
+        <orderInCategory>1150</orderInCategory>
+    </EntityCodexEntryDef>
+    <EntityCodexEntryDef>
+        <defName>FleshSpiker</defName>
+        <label>spikers</label>
+        <description>A further mutation of fleshbeasts. Spikers are smaller mounds of fless that can split into smaller forms upon death. Unlike trispikes, however, these creatures are designed to be vectors of spreading twisted mechanites, delivering weak but rapid attacks.</description>
+        <category>Basic</category>
+        <uiIconPath>UI/CodexIcons/spikerCodexIcon</uiIconPath>
+        <linkedThings>
+            <li>tfSpiker</li>
+        </linkedThings>
+        <discoveredResearchProjects>
+            <li>tfDieVest</li>
+        </discoveredResearchProjects>
+        <orderInCategory>223</orderInCategory>
+    </EntityCodexEntryDef>
+    <EntityCodexEntryDef>
+        <defName>FleshMind</defName>
+        <label>Flesh Mind</label>
+        <description>In culminations of archotech influence, massive amounts of twisted mechanites can shape mass into Flesh Minds. These horrid entities are a semi-direct extension of Horaxian influence.</description>
+        <category>Ultimate</category>
+        <discoveryType>BecameVisible</discoveryType>
+        <uiIconPath>UI/CodexIcons/fleshmindCodexIcon</uiIconPath>
+        <linkedThings>
+            <li>tfPolymeri</li>
+        </linkedThings>
+        <discoveredResearchProjects>
+            <li>tfBossDrops</li>
+        </discoveredResearchProjects>
+        <orderInCategory>167</orderInCategory>
+        <hideInPlaystyles>
+            <li>AmbientHorror</li>
+        </hideInPlaystyles>
+    </EntityCodexEntryDef>
+
+</Defs>

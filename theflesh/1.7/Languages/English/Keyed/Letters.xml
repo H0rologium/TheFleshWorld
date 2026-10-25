@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <TwistedSunAlertLBL_Active>Twisted Sun Risen</TwistedSunAlertLBL_Active>
+    <TwistedSunAlertLBL_Inactive>Twisted Sun Set</TwistedSunAlertLBL_Inactive>
+    <TwistedSunAlertLBL_Incoming>Twisted Sun Incoming</TwistedSunAlertLBL_Incoming>
+    <TwistedSunAlertTXT_Incoming>A twisted sun will soon rise. Find shelter indoors immediately.</TwistedSunAlertTXT_Incoming>
+    <TwistedSunAlertTXT_Active>The twisted sun has risen. Anyone outside will begin a horrid, rapid transformation.</TwistedSunAlertTXT_Active>
+    <TwistedSunAlertTXT_Inactive>The twisted sun has set until morning, around 05:00. Caution should still be taken and ventures outside should only happen if absolutely necessary.</TwistedSunAlertTXT_Inactive>
+    <TwistedSunArrivedLabel>Twisted Sun Rises</TwistedSunArrivedLabel>
+    <TwistedSunArrivedText>The atmosphere begins to be cut with a sudden red brilliance. The twisted sun has risen.\n\nRemain indoors at all times. During night, ventures may be made outside at the risk of the individual.</TwistedSunArrivedText>
+    <TwistedSunNightfall>The sun has set for now. It is relatively safe to go outside until the next morning</TwistedSunNightfall>
+    <TwistedSunMorning>The sun will rise within an hour or two! Get back inside!</TwistedSunMorning>
+    <CleanRitualCompleteLabel>{0} complete</CleanRitualCompleteLabel>
+    <CleanRitualCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. The archotech will soon cleanse the area of twisted mechanites.{2}</CleanRitualCompleteText>
+    <AnimalInfectMessage>Something is out there...</AnimalInfectMessage>
+    <SingleVisitorArrivesFleshprise>{PAWN_titleIndef} from {1} is visiting the colony.\n\n{PAWN_pronoun} is named {PAWN_nameFull}.</SingleVisitorArrivesFleshprise>
+    <GroupVisitorsArriveFleshprise>A group from {0} are visiting the colony.</GroupVisitorsArriveFleshprise>
+    <FleshMindReveal>A Flesh Mind has appeared!</FleshMindReveal>
+    <HealCauseLabel>Twisted Mechanites</HealCauseLabel>
+    <AdditionalRitualRewardTF>Due to a high ritual quality, fleshbeasts in the area will also be weakened.</AdditionalRitualRewardTF>
+    <AdditionalRitualRewardTFREQ>At this ritual quality, any fleshbeasts spawned on the map will also be weakened for a medium duration.</AdditionalRitualRewardTFREQ>
+
+
+    <TFMS_RESTART>Requires a Game Restart to Apply Changes.\n\n</TFMS_RESTART>
+    <TFMS_Fingers>Fingerspikes will not be infected with twisted mechanites if this is disabled</TFMS_Fingers>
+    <TFMS_Surprises>Sometimes someone can show up and be hiding a dangerous secret. Does not occur with colonist join events.</TFMS_Surprises>
+    <TFMS_NEDrops>If enabled, nerfs boss drops from Persona Core to 5 Shards instead. This is in addition to its normal drops.</TFMS_NEDrops>
+    <TFMS_Contactor>When enabled, infected creatures can inflict the infection upon hitting another creature, or increase the severity of an existing infection.\n\nDisabling this only disables spread through direct combat, not by other means.</TFMS_Contactor>
+    <TFMS_Fingers_Title>Fingerspikes are also infected</TFMS_Fingers_Title>
+    <TFMS_Surprises_Title>Enable Surprises</TFMS_Surprises_Title>
+    <TFMS_NEDrops_Title>Nerf Elite Drops</TFMS_NEDrops_Title>
+    <TFMS_Contactor_Title>Infection spreads through contact</TFMS_Contactor_Title>
+
+
+
+    <TFMS_MI_BTS>Whenever you generate a new world, starway factions will never be enemies with each other. Turning this setting off allows them to possibly be enemies with each other.</TFMS_MI_BTS>
+    <TFMS_MI_BTS_AASD_Title>Always Ally Starway Divisions</TFMS_MI_BTS_AASD_Title>
+    <TFMS_MI_BTS_Title>Mod integrations - Between the Stars</TFMS_MI_BTS_Title>
+    <TFMS_MI_ZERG>Whether zerg should spawn as twisted mechanite carriers (disabled by default).\n\nThis setting still respects the 'infection spreads through contact' option.</TFMS_MI_ZERG>
+    <TFMS_MI_ZERG_PS></TFMS_MI_ZERG_PS>
+    <TFMS_MI_ZERG_EZC_Title>Zerg carry Twisted Mechanites</TFMS_MI_ZERG_EZC_Title>
+    <TFMS_MI_ZERG_Title>Mod integrations - MUSC_Zerg Mod</TFMS_MI_ZERG_Title>
+</LanguageData>

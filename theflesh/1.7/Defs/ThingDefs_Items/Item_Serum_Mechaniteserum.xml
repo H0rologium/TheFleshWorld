@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="SerumBase">
+    <defName>tfMechaniteSerum</defName>
+    <label>mechanite serum</label>
+    <description>A syringe of flesh-colored liquid that injects a cocktail of mechanites into the user. While some of these effects can be beneficial, it can take a while to recover from using this serum.\n\nDue to the nature of this serum, it is either considered a last resort or cruel and unusual punishment. Caution should be advised using this serum.</description>
+    <graphicData>
+      <texPath>Things/Item/mechserum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>5</stackLimit>
+    <comps>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>FibrousMechanites</hediffDef>
+        <allowRepeatedUse>false</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>tfInfection</hediffDef>
+        <allowRepeatedUse>false</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>SensoryMechanites</hediffDef>
+        <allowRepeatedUse>false</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+    </comps>
+    <costList>
+      <Neutroamine>5</Neutroamine>
+      <Meat_Twisted>20</Meat_Twisted>
+      <Bioferrite>20</Bioferrite>
+    </costList>
+    <thingSetMakerTags />
+    <recipeMaker>
+      <workAmount>1080</workAmount>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>tfDieVest</researchPrerequisite>
+    </recipeMaker>
+    <allowedArchonexusCount>5</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="SerumBase">
+    <defName>tfFOLSerum</defName>
+    <label>Gift of Horax</label>
+    <description>A syringe of anomalous mechanites ready to be injected into a user. These mechanites utilize the healing properties of twisted mechanites, primarily focusing on restoring older wounds like scars.\n\nThis serum is sometimes called 'The Font of Life', restoring scars and grievous wounds, restoring the user to a former state of youthful health.</description>
+    <graphicData>
+      <texPath>Things/Item/thefont</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>4</stackLimit>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>3000</MarketValue>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <Mass>0.1</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <thingSetMakerTags />
+    <ingestible>
+        <outcomeDoers>
+            <li Class="TheFlesh.IngestionOutcomeDoer_FontOfLife" />
+        </outcomeDoers>
+    </ingestible>
+    <comps Inherit="False">
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useLabel>Use {0_label}</useLabel>
+        <useJob>Ingest</useJob>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_Drug">
+          <chemical>mechPurgerPillsChem</chemical>
+          <addictiveness>0.0</addictiveness>
+          <minToleranceToAddict>1.0</minToleranceToAddict>
+          <existingAddictionSeverityOffset>0.0</existingAddictionSeverityOffset>
+          <listOrder>36</listOrder>
+          <isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+      </li>
+    </comps>
+    <costList>
+      <Neutroamine>20</Neutroamine>
+      <Shard>4</Shard>
+      <Bioferrite>44</Bioferrite>
+      <MedicineUltratech>2</MedicineUltratech>
+    </costList>
+    <recipeMaker>
+      <workAmount>1080</workAmount>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>tfBossDrops</researchPrerequisite>
+    </recipeMaker>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+</Defs>
