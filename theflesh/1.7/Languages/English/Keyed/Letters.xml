@@ -23,13 +23,14 @@
 
     <TFMS_RESTART>Requires a Game Restart to Apply Changes.\n\n</TFMS_RESTART>
     <TFMS_Fingers>Fingerspikes will not be infected with twisted mechanites if this is disabled</TFMS_Fingers>
-    <TFMS_Surprises>Sometimes someone can show up and be hiding a dangerous secret. Does not occur with colonist join events.</TFMS_Surprises>
+    <TFMS_Surprises>Sometimes someone can show up and be hiding a dangerous secret. Does not occur with join events regardless of this setting.</TFMS_Surprises>
     <TFMS_NEDrops>If enabled, nerfs boss drops from Persona Core to 5 Shards instead. This is in addition to its normal drops.</TFMS_NEDrops>
     <TFMS_Contactor>When enabled, infected creatures can inflict the infection upon hitting another creature, or increase the severity of an existing infection.\n\nDisabling this only disables spread through direct combat, not by other means.</TFMS_Contactor>
     <TFMS_Fingers_Title>Fingerspikes are also infected</TFMS_Fingers_Title>
     <TFMS_Surprises_Title>Enable Surprises</TFMS_Surprises_Title>
     <TFMS_NEDrops_Title>Nerf Elite Drops</TFMS_NEDrops_Title>
     <TFMS_Contactor_Title>Infection spreads through contact</TFMS_Contactor_Title>
+    <TFMS_ExtraSurpriseRoll_Title>Surprise Chance:</TFMS_ExtraSurpriseRoll_Title>
 
 
 
