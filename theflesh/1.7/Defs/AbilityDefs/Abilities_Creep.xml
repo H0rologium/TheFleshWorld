@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef>
+        <defName>tfOrganTransmute</defName>
+        <label>organ transmutation</label>
+        <description>Use dark psychic power to induce chaotic reconfiguration of flesh. This reorganizes organic meat into a usable organ at random. This activates latent mechanites in the user.</description>
+        <iconPath>UI/Abilities/OrganTransmute</iconPath>
+        <cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
+        <showPsycastEffects>false</showPsycastEffects>
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <stunTargetWhileCasting>true</stunTargetWhileCasting>
+        <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+        <warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+        <warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+        <warmupSound>AnomalyAbilityWarmup</warmupSound>
+        <writeCombatLog>true</writeCombatLog>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>3</warmupTime>
+            <range>4.1</range>
+            <requireLineOfSight>True</requireLineOfSight>
+            <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+            <targetParams>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_PsychicSlaughter" />
+        </comps>
+    </AbilityDef>
+</Defs>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>SynthesizeHemogen</defName>
+        <label>synthesize hemogen</label>
+        <description>While twisted flesh is for the most part inert, cells can still be extracted to create hemogen in times of need. Transfusion recipients still report squirming sensations in their limbs.</description>
+        <jobString>Synthesizing hemogen.</jobString>
+        <workSkill>Medicine</workSkill>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        <workAmount>670</workAmount>
+        <skillRequirements>
+            <Medicine>6</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+        </fixedIngredientFilter>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Twisted</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <products>
+            <HemogenPack>1</HemogenPack>
+        </products>
+        <recipeUsers Inherit="false">
+            <li>SerumCentrifuge</li>
+        </recipeUsers>
+        <researchPrerequisite>SerumSynthesis</researchPrerequisite>
+    </RecipeDef>
+</Defs>

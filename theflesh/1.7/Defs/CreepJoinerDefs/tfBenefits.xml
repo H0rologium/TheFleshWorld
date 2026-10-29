@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <CreepJoinerBenefitDef>
+        <defName>tfOrganFormer</defName>
+        <label>flesh manipulator</label>
+        <letterExtra>{PAWN_nameDef} has narrowly survived an experiment involving messing with strange archites. {PAWN_pronoun} can transmute meat into organs seemingly at will. {PAWN_pronoun} looks skittish when mentioning this to you, scratching at their chest seemingly at random.</letterExtra>
+        <abilities>
+            <li>tfOrganTransmute</li>
+        </abilities>
+        <skills>
+            <Medicine>8~10</Medicine>
+        </skills>
+    </CreepJoinerBenefitDef>
+
+</Defs>

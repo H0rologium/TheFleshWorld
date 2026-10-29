@@ -7,5 +7,6 @@
   <v1.7>
     <li>1.7</li>
     <li>1.7/Languages</li>
+    <li IfModActive="Ludeon.Rimworld.Biotech">1.7/BiotechIntegrations</li>
   </v1.7>
 </loadFolders>
