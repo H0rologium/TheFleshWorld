@@ -3,8 +3,8 @@
 
     <CreepJoinerBenefitDef>
         <defName>tfOrganFormer</defName>
-        <label>flesh manipulator</label>
-        <letterExtra>{PAWN_nameDef} has narrowly survived an experiment involving messing with strange archites. {PAWN_pronoun} can transmute meat into organs seemingly at will. {PAWN_pronoun} looks skittish when mentioning this to you, scratching at their chest seemingly at random.</letterExtra>
+        <label>flesh Manipulator</label>
+        <letterExtra>{PAWN_nameDef} has narrowly survived an experiment involving messing with strange archites. {PAWN_pronoun} can transmute raw meat into other organic items such as food or even organs seemingly at will. This seems to work best with twisted meat. {PAWN_pronoun} looks skittish when mentioning this to you, scratching at their chest seemingly at random. They tell you they have no real control over what is made, but you feel like there is more that they are hiding.</letterExtra>
         <abilities>
             <li>tfOrganTransmute</li>
         </abilities>

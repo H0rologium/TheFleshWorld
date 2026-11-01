@@ -19,7 +19,7 @@
     <HealCauseLabel>Twisted Mechanites</HealCauseLabel>
     <AdditionalRitualRewardTF>Due to a high ritual quality, fleshbeasts in the area will also be weakened.</AdditionalRitualRewardTF>
     <AdditionalRitualRewardTFREQ>At this ritual quality, any fleshbeasts spawned on the map will also be weakened for a medium duration.</AdditionalRitualRewardTFREQ>
-
+    <AbilityOrganShapeDeniedThing>There is not enough accessible raw flesh to transmute the targeted item stack.</AbilityOrganShapeDeniedThing>
 
     <TFMS_RESTART>Requires a Game Restart to Apply Changes.\n\n</TFMS_RESTART>
     <TFMS_Fingers>Fingerspikes will not be infected with twisted mechanites if this is disabled</TFMS_Fingers>

@@ -2,7 +2,7 @@
 <Defs>
     <AbilityDef>
         <defName>tfOrganTransmute</defName>
-        <label>organ transmutation</label>
+        <label>Meat Transmute</label>
         <description>Use dark psychic power to induce chaotic reconfiguration of flesh. This reorganizes organic meat into a usable organ at random. This activates latent mechanites in the user.</description>
         <iconPath>UI/Abilities/OrganTransmute</iconPath>
         <cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
@@ -21,12 +21,13 @@
             <requireLineOfSight>True</requireLineOfSight>
             <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
             <targetParams>
+                <canTargetItems>true</canTargetItems>
                 <canTargetBuildings>false</canTargetBuildings>
                 <canTargetMechs>false</canTargetMechs>
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="CompProperties_PsychicSlaughter" />
+            <li Class="TheFlesh.CompProperties.CompProperties_OrganTransmute" />
         </comps>
     </AbilityDef>
 </Defs>

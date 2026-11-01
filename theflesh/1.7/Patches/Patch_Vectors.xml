@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Meat_Twisted"]/ingestible/outcomeDoers</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Meat_Twisted"]/ingestible</xpath>
+                    <value>
+                        <outcomeDoers />
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Meat_Twisted"]/ingestible/outcomeDoers</xpath>
+                <value>
+                    <li Class="TheFlesh.TwistedOutcomeDoer_Consume" />
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>
