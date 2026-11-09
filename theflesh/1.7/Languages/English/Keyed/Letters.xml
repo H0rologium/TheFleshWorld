@@ -20,6 +20,8 @@
     <AdditionalRitualRewardTF>Due to a high ritual quality, fleshbeasts in the area will also be weakened.</AdditionalRitualRewardTF>
     <AdditionalRitualRewardTFREQ>At this ritual quality, any fleshbeasts spawned on the map will also be weakened for a medium duration.</AdditionalRitualRewardTFREQ>
     <AbilityOrganShapeDeniedThing>There is not enough accessible raw flesh to transmute the targeted item stack.</AbilityOrganShapeDeniedThing>
+    <TFITFM_Label>Twisted Mechanites</TFITFM_LABEL>
+    <TFITFM_Text>You have detected that someone has caught an infection. Unlike other mechanites, Twisted Mechanites should be treated with the best medicine, as the side effects are quite dire.</TFITFM_Text>
 
     <TFMS_RESTART>Requires a Game Restart to Apply Changes.\n\n</TFMS_RESTART>
     <TFMS_Fingers>Fingerspikes will not be infected with twisted mechanites if this is disabled</TFMS_Fingers>
@@ -31,7 +33,6 @@
     <TFMS_NEDrops_Title>Nerf Elite Drops</TFMS_NEDrops_Title>
     <TFMS_Contactor_Title>Infection spreads through contact</TFMS_Contactor_Title>
     <TFMS_ExtraSurpriseRoll_Title>Surprise Chance:</TFMS_ExtraSurpriseRoll_Title>
-
 
 
     <TFMS_MI_BTS>Whenever you generate a new world, starway factions will never be enemies with each other. Turning this setting off allows them to possibly be enemies with each other.</TFMS_MI_BTS>

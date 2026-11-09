@@ -20,7 +20,8 @@ namespace TheFlesh
         public static Hediff TryInfectPawn(Pawn victim)
         {
             Hediff activeinfection = victim.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.tfInfection);
-            if (activeinfection == null) activeinfection = victim.health.AddHediff(InternalDefOf.tfInfection); else return null;
+            if (activeinfection == null) activeinfection = victim.health.AddHediff(InternalDefOf.tfInfection);
+            //Please don't check the commit history its embarassing how long that lasted for
             return activeinfection;
         }
 
