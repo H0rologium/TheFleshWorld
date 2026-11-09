@@ -22,6 +22,12 @@
     <AbilityOrganShapeDeniedThing>There is not enough accessible raw flesh to transmute the targeted item stack.</AbilityOrganShapeDeniedThing>
     <TFITFM_Label>Twisted Mechanites</TFITFM_LABEL>
     <TFITFM_Text>You have detected that someone has caught an infection. Unlike other mechanites, Twisted Mechanites should be treated with the best medicine, as the side effects are quite dire.</TFITFM_Text>
+    <TFHemoGenExtractLOne>Hemogen contained:</TFHemoGenExtractLOne>
+    <TFHemogenHarvestedPerDay>per day</TFHemogenHarvestedPerDay>
+    <TFHGEUnloadToggle>Toggle hemogen unloading</TFHGEUnloadEnable>
+    <TFHGEUnloadDesc>When active, colonists will unload hemogen from the extractor as it is filling up</TFHGEUnloadDesc>
+    <TFHGEEjectHemogenLabel>Eject hemogen</TFHGEEjectHemogenLabel>
+    <TFHGEEjectHemogenDesc>Eject all full hemogen packs onto the ground</TFHGEEjectHemogenDesc>
 
     <TFMS_RESTART>Requires a Game Restart to Apply Changes.\n\n</TFMS_RESTART>
     <TFMS_Fingers>Fingerspikes will not be infected with twisted mechanites if this is disabled</TFMS_Fingers>

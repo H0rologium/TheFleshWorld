@@ -100,6 +100,8 @@ namespace TheFlesh
             }
             this.RebuildCables();
         }
+        private static readonly Texture2D toggleUnloadIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/ToggleHemogenUnloadGizmo");
+        private static readonly Texture2D ejectHemogenIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/EjectHemogenGizmo");
 
         #region events
         private void OnLinkRemoved(CompFacility facility, Thing thing)
@@ -194,10 +196,10 @@ namespace TheFlesh
             {
                 stringBuilder.AppendLine();
             }
-            stringBuilder.Append("BioferriteHarvesterContained".Translate());
+            stringBuilder.Append("TFHemoGenExtractLOne".Translate());
             StringBuilder stringBuilder2 = stringBuilder;
             DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(9, 3);
-            defaultInterpolatedStringHandler.AppendLiteral(": ");
+            defaultInterpolatedStringHandler.AppendLiteral(" ");
             defaultInterpolatedStringHandler.AppendFormatted<float>(this.storedHemogenPacks, "F2");
             defaultInterpolatedStringHandler.AppendLiteral(" / ");
             defaultInterpolatedStringHandler.AppendFormatted(MaxCapacity.ToString());
@@ -207,7 +209,7 @@ namespace TheFlesh
             stringBuilder2.Append(defaultInterpolatedStringHandler.ToStringAndClear());
             StringBuilder stringBuilder3 = stringBuilder;
             DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(1, 1);
-            defaultInterpolatedStringHandler2.AppendFormatted<TaggedString>("BioferriteHarvesterPerDay".Translate());
+            defaultInterpolatedStringHandler2.AppendFormatted<TaggedString>("TFHemogenHarvestedPerDay".Translate());
             defaultInterpolatedStringHandler2.AppendLiteral(")");
             stringBuilder3.Append(defaultInterpolatedStringHandler2.ToStringAndClear());
             return stringBuilder.ToString();
@@ -218,6 +220,27 @@ namespace TheFlesh
             {
                 yield return gizmo;
             }
+
+            yield return new Command_Toggle
+            {
+                defaultLabel = "TFHGEUnloadToggle".Translate(),
+                defaultDesc = "TFHGEUnloadDesc".Translate(),
+                toggleAction = () => unloadingEnabled = !unloadingEnabled,
+                isActive = () => unloadingEnabled,
+                icon = toggleUnloadIcon
+            };
+
+            if (storedHemogenPacks >= 1f)
+            {
+                yield return new Command_Action
+                {
+                    action = new Action(EjectContents),
+                    defaultLabel = "TFHGEEjectHemogenLabel".Translate(),
+                    defaultDesc = "TFHGEEjectHemogenDesc".Translate(),
+                    icon = ejectHemogenIcon
+                };
+            }
+            
         }
 
 
