@@ -14,7 +14,7 @@
     <label>flesh bloater</label>
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <race>tfBloater</race>
-    <combatPower>200</combatPower>
+    <combatPower>160</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -129,6 +129,36 @@
       <!--<li>
         <def>CoveredInFirefoam</def>
       </li>-->
+    </startingHediffs>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>tfFleshHulk</defName>
+    <label>Flesh Hulk</label>
+    <race>tfHulker</race>
+    <forceDeathOnDowned>false</forceDeathOnDowned>
+    <combatPower>200</combatPower>
+    <isBoss>false</isBoss>
+    <allowOldAgeInjuries>false</allowOldAgeInjuries>
+    <immuneToGameConditionEffects>false</immuneToGameConditionEffects>
+    <preventIdeo>true</preventIdeo>
+    <canStrip>false</canStrip>
+    <immuneToTraps>true</immuneToTraps>
+    <collidesWithPawns>true</collidesWithPawns>
+    <ignoresPainShock>false</ignoresPainShock>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshybeast/fleshhulk</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <startingHediffs>
+      <li>
+        <def>tfInfection_entity</def>
+      </li>
     </startingHediffs>
   </PawnKindDef>
 </Defs>

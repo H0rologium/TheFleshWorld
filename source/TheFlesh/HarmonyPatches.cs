@@ -32,9 +32,9 @@ namespace TheFlesh
             public static void AddMechaniteInfectionOnHit(DamageInfo dinfo, Pawn __instance)
             {
                 if (__instance == null || (dinfo.Instigator as Pawn) == null) return;
-                if (!LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().spreadonHit) return;
-                if (dinfo.Def.isRanged || dinfo.Def.isExplosive) return;
                 if (TheFleshTools.anomalyShutOff(true)) return;
+                if (dinfo.Def.isRanged || dinfo.Def.isExplosive) return;
+                if (!LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().spreadonHit) return;
                 if (!Rand.Chance(LoadedModManager.GetMod<TheFlesh>().GetSettings<TheFleshModSettings>().chanceperhitToApply)) return;
                 //Check if attacker has infection
                 bool hasBaseinf = ((Pawn)dinfo.Instigator).health.hediffSet.HasHediff(InternalDefOf.tfInfection);

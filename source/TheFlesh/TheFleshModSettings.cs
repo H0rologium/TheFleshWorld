@@ -15,6 +15,7 @@ namespace TheFlesh
         public float severityPerHit = 0.03f;
         public float chanceperhitToApply = 0.7f;
         public float surpriseextrachance = 1.0f;
+        public bool enableFleshHordeAssault = true;
 
         public override void ExposeData()
         {
@@ -27,6 +28,7 @@ namespace TheFlesh
             Scribe_Values.Look(ref severityPerHit, "tmsevperhit");
             Scribe_Values.Look(ref lesserMindDrop, "tfbossdropmid");
             Scribe_Values.Look(ref surpriseextrachance, "surpriseExtraChance");
+            Scribe_Values.Look(ref enableFleshHordeAssault, "tfenableHordeAssault");
             base.ExposeData();
         }
     }
@@ -88,7 +90,7 @@ namespace TheFlesh
                 settings.surpriseextrachance = lst.Slider(settings.surpriseextrachance, 0f, 1f);
             }
             lst.CheckboxLabeled("TFMS_NEDrops_Title".Translate(), ref settings.lesserMindDrop, "TFMS_NEDrops".Translate());
-           
+            lst.CheckboxLabeled("TFMS_TFHORDE_Title".Translate(), ref settings.enableFleshHordeAssault, "TFMS_TFHORDE".Translate());
 
 
 

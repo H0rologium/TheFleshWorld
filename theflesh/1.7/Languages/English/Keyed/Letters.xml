@@ -39,6 +39,8 @@
     <TFMS_NEDrops_Title>Nerf Elite Drops</TFMS_NEDrops_Title>
     <TFMS_Contactor_Title>Infection spreads through contact</TFMS_Contactor_Title>
     <TFMS_ExtraSurpriseRoll_Title>Surprise Chance:</TFMS_ExtraSurpriseRoll_Title>
+    <TFMS_TFHORDE_Title>Enable Horde Assaults</TFMS_TFHORDE_Title>
+    <TFMS_TFHORDE>Toggles Fleshbeast Hordes: Fleshbeast assaults that use extra points for a more threatening horde of flesh</TFMS_TFHORDE>
 
 
     <TFMS_MI_BTS>Whenever you generate a new world, starway factions will never be enemies with each other. Turning this setting off allows them to possibly be enemies with each other.</TFMS_MI_BTS>

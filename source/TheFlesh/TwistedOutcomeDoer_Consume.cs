@@ -20,7 +20,7 @@ namespace TheFlesh
                     }
                     else
                     {
-                        TheFleshTools.TryAddSeverity(pawn, 0.5f);
+                        TheFleshTools.TryAddSeverity(pawn, 0.05f);
                     }
                 }
             }

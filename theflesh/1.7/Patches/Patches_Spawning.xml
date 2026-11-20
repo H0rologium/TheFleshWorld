@@ -12,6 +12,7 @@
                     <value>
                         <tfBloater>3</tfBloater>
                         <tfSpiker>5</tfSpiker>
+                        <tfFleshHulk>2</tfFleshHulk>
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">

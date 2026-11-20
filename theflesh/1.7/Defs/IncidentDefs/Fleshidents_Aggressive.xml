@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <IncidentDef ParentName="EntitySwarmBase">
+        <defName>theFleshbeastHorde</defName>
+        <label>Fleshbeast Horde</label>
+        <workerClass>TheFlesh.IncidentWorker_FleshbeastHorde</workerClass>
+        <baseChance>1.67</baseChance>
+        <minAnomalyThreatLevel>1</minAnomalyThreatLevel>
+        <letterLabel>Fleshbeast Horde</letterLabel>
+        <letterText>The ground seems to be giving way. The sounds of writhing flesh and cracking bones can be heard from below.\n\nReadings indicate significant activity, be ready, a horde is coming!</letterText>
+        <letterTextPlural>Several sinkholes have started appearing. The sounds of writhing flesh and cracking bones can be heard from below.\n\nReadings indicate significant activity, be ready, a horde is coming!</letterTextPlural>
+        <letterDef>ThreatBig</letterDef>
+        <earliestDay>35</earliestDay>
+    </IncidentDef>
+</Defs>

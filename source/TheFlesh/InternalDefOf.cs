@@ -25,6 +25,7 @@ namespace TheFlesh
         public static PawnKindDef tfNewborn;
         public static PawnKindDef tfBloater;
         public static PawnKindDef tfPolymeri;
+        public static PawnKindDef tfFleshHulk;
 
         public static GameConditionDef GCFleshDayBreak;
         public static GameConditionDef FleshDayBreak_Onset;
